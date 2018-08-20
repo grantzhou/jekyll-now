@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hi, I am Grant Zhou
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+The site is just created, and I am going to use it to post any PostgreSQL related technical topics here.
+Any comments please contact me.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[grantzhou@aedata.ca](mailto:grantzhou@aedata.ca)
