@@ -27,7 +27,8 @@ title: PostgreSQL 2018-09-02 每周新闻
 
 ### 应用补丁
 Michaël Paquier 推动：
-- 通过避免早期锁定队列来改进VACUUM和ANALYZE。 VACUUM的调用者可以执行早期查找争用，这可能导致其他会话阻止完成请求，
+  ```
+  通过避免早期锁定队列来改进VACUUM和ANALYZE。 VACUUM的调用者可以执行早期查找争用，这可能导致其他会话阻止完成请求，
   从而导致潜在的DOS攻击，因为即使是非特权用户也可以尝试对关键目录表进行VACCUUM填充，以阻止所有传入的连接尝试。
   与TRUNCATE相反，客户端可以在构建与VACUUM的关系列表之后尝试系统范围的VACUUM，这可能导致vacuum_rel（）或analyze_rel（）尝试锁定关系，
   但只会阻塞操作。当客户端指定关系列表并且需要跳过关系时，在构建要处理的关系列表时完成所有权检查，从而防止稍后的锁定尝试。
@@ -39,14 +40,20 @@ Michaël Paquier 推动：
   尝试对每个分区进行早期所有权检查被证明是乏味的，因为这会导致锁升级的死锁风险，
   并且如果列出不归属的分区表，则跳过所有分区将导致与Postgres 10实现的用于分区表的VACUUM方式相比的行为不同。
   无论如何，报告的与关键关系的早期锁定队列相关的原始问题是固定的，因此优先考虑避免向后不兼容的行为。
-
+```
 问题提交者：Lloyd Albin, Jeremy Schneider
+
 作者：Michael Paquier
+
 代码审核：Nathan Bossart，Kyotaro Horiguchi
+
 讨论：
+
   https://postgr.es/m/152512087100.19803.12733865831237526317@wrigleys.postgresql.org
-  讨论：
+  
+讨论：
   https://postgr.es/m/20180812222142.GA6097@paquier.xyz
+  
   https://git.postgresql.org/pg/commitdiff/a556549d7e6dce15fe216bd4130ea64239f4d83f
   
  
