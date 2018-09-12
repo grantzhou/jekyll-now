@@ -1,4 +1,4 @@
-# New Document---
+---
 layout: post
 title: PostgreSQL 每周新闻 2018-09-12
 ---
