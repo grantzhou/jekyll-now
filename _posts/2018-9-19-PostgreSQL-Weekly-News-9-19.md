@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PostgreSQL 每周新闻 2018-09-12
+title: PostgreSQL 每周新闻 2018-09-19
 ---
 
 ### PostgreSQL每周新闻 #274 - 2018年9月12日
