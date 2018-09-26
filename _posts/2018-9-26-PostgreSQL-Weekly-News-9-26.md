@@ -69,7 +69,9 @@ Postgres-XL是一个大规模并行处理数据库 - 与PostgreSQL密切兼容�
 `CHRIS TRAVERS`
 
 ## [pg_terminator：清理会话和查询的工具](https://postgresweekly.com/link/53282/web)
-配置后，它可以根据各种规则取消/终止查询和连接。 (Git 地址](https://postgresweekly.com/link/53283/web)。
+配置后，它可以根据各种规则取消/终止查询和连接。
+
+[Git 地址](https://postgresweekly.com/link/53283/web)。
 
 `HUBERT DEPESZ LUBACZEWSKI`
 
