@@ -84,7 +84,7 @@ Postgres-XL是一个大规模并行处理数据库 - 与PostgreSQL密切兼容�
 ## [2Q PGConf 2018 ](https://postgresweekly.com/link/53285/web)
 12月4日至5日 (芝加哥)
 
-一个致力于交换PostgreSQL知识的会议。
+一个致力于分享PostgreSQL知识的会议。
 
 
 ## [PGCONF.ASIA 2018](https://postgresweekly.com/link/52935/web)
