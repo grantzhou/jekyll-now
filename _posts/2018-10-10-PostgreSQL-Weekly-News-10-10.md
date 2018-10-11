@@ -11,10 +11,7 @@ title: PostgreSQL 每周新闻 2018-10-10
 ## [PostGraphile v4发布：用于数据库的GraphQL API](http://www.evernote.com/l/ABn08E8EV-dEbolbOEw8ytIQvj8J3D46v-Y/)
 执行一个命令（或挂载一个Node.js中间件）并获取数据库的高性能GraphQL API。
 
-```
-备注：原文https://medium.com/@Benjie/postgraphile-v4-released-9dcb117d3e69 在国内需V-P-N访问
-
-```
+备注：[原文发布在 medium.com](https://medium.com/@Benjie/postgraphile-v4-released-9dcb117d3e69) 在国内需V-P-N访问
 
 `BENJIE GILLAM`
 
