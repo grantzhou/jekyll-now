@@ -11,11 +11,11 @@ title: PostgreSQL 每周新闻 2018-10-17
 
 
 ## [管理大型Postgres数据库的备份和复制](https://medium.com/leboncoin-engineering-blog/managing-postgresql-backup-and-replication-for-very-large-databases-61fb36e815a0)
+
 Postgres有不同的模型用于制作具有不同优缺点的备份，当在大规模的情况下，这家公司却依赖于Barman，pg_basebackup和pg_receivewal。
 
-**Medium 网站国内无法访问，这里提供PDF版本下载**
-![_config.yml]({{ site.baseurl }}/images/Managing%20PostgreSQL%20backup%20and%20replication%20for%20very%20large%20databases.pdf)
-![DOWNLOAD]({{ site.baseurl }}/images/Managing%20PostgreSQL%20backup%20and%20replication%20for%20very%20large%20databases.pdf)
+*Medium 网站国内无法访问，这里提供PDF版本下载*
+![DOWNLOAD](https://github.com/grantzhou/grantzhou.github.io/blob/master/images/Managing%20PostgreSQL%20backup%20and%20replication%20for%20very%20large%20databases.pdf)
 
 `FLAVIO GURGEL`
 
@@ -27,6 +27,7 @@ Postgres有不同的模型用于制作具有不同优缺点的备份，当在大
 
 ## [2Q PGConf 2018 - 现在就安排](http://www.2qpgconf.com/)
 ![2QPG](https://copm.s3.amazonaws.com/7b89e5d9.png)
+
 加入我们，在芝加哥，了解PostgreSQL最近的成就和令人兴奋的未来发展。 您还可以参加以下专家的实践培训：多主复制，性能调优和PostgreSQL安全。
 
 `2NDQUADRANT POSTGRESQL` *活动赞助商*
