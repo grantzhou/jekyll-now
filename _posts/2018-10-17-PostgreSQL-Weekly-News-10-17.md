@@ -14,8 +14,7 @@ title: PostgreSQL 每周新闻 2018-10-17
 
 Postgres有不同的模型用于制作具有不同优缺点的备份，当在大规模的情况下，这家公司却依赖于Barman，pg_basebackup和pg_receivewal。
 
-*Medium 网站国内无法访问，这里提供PDF版本下载*
-![DOWNLOAD](https://github.com/grantzhou/grantzhou.github.io/blob/master/images/Managing%20PostgreSQL%20backup%20and%20replication%20for%20very%20large%20databases.pdf)
+[*Medium 网站国内无法访问，这里提供PDF版本下载* DOWNLOAD]({{ site.baseurl }}/images/Managing%20PostgreSQL%20backup%20and%20replication%20for%20very%20large%20databases.pdf)
 
 `FLAVIO GURGEL`
 
