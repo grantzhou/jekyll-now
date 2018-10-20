@@ -2,6 +2,9 @@
 layout: post
 title: Citus Data向非营利性PostgreSQL组织捐赠1％的股权
 ---
+Adrian Bridgwater
+![Adrian](https://cdn.ttgtmedia.com/rms/computerweekly/Adrian-Bridgwater-60px.jpg)
+
 
 [查看新闻链接](https://www.computerweekly.com/blog/Open-Source-Insider/Citus-Data-donates-1-equity-to-non-profit-PostgreSQL-orgs)
 
