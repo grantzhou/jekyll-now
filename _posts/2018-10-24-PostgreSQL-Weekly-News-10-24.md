@@ -80,8 +80,8 @@ Pgpool是一种流行的连接池中间件，它现在也支持SCRAM身份验证
 `TATSUO ISHII`
 
 # 活动
-## [PostgreSQL并非是您的传统SQL数据库 - 10月30日（网络研讨会](https://register.gotowebinar.com/register/3930869911246887681?source=lp)
-）GülçinYıldırımJelínek将介绍PostgreSQL中的设计选择，PostgreSQL中的全文搜索等。
+## [PostgreSQL并非是您的传统SQL数据库 - 10月30日（网络研讨会Webinar）](https://register.gotowebinar.com/register/3930869911246887681?source=lp)
+Gülçin Yıldırım Jelínek将介绍PostgreSQL中的设计选择，PostgreSQL中的全文搜索等。
 
 ## [PGDay.Seoul 2018](http://pgday.postgresql.kr/)
 2018年11月3日（韩国首尔）PostgreSQL韩国用户组准备了第三个活动(半天)。
