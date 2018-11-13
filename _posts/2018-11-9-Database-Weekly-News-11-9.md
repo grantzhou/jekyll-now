@@ -84,7 +84,7 @@ MySQL团队展示了MySQL如何解决现代安全和隐私问题。
 `大卫吉尔德 DAVID GILDEH`
 
 ## [使用LMDB和RocksDB对英特尔Optane SSD的基准测试](http://www.lmdb.tech/bench/optanessd/)
-存储英特尔最新的Optane SSD（甚至可以配置为系统RAM）存储LBMD和RocksDB的持久性键值，用于完成测试。
+使用英特尔最新的Optane SSD（甚至可以配置为系统RAM）存储LBMD和RocksDB的持久性键值，用于完成测试。
 
 `SYMAS CORP`
 
