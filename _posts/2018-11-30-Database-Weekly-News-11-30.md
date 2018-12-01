@@ -36,7 +36,7 @@ https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/io0efuv9eikko
 
 `DATANAMI`
 
-## [Amazon Quantum Ledger数据库 -  AWS的re：Invent事件中的另一项新服务](https://aws.amazon.com/qldb/)
+## [Amazon Quantum Ledger数据库 -  AWS的re：Invent活动中宣布的另一项新服务](https://aws.amazon.com/qldb/)
 
 QLDB目前仅以预览形式提供，是一个托管分类帐数据库，提供透明，不可变和可加密验证的事务日志。
 
