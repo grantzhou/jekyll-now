@@ -20,7 +20,7 @@ AgensGraph是Postgres上构建的图形数据库（支持SQL和Cypher查询）�
 
 ## [JSON模式文档验证？在MongoDB中-没问题](https://studio3t.com/knowledge-base/articles/json-schema-mongodb/?utm_source=newsletter&utm_medium=cooper&utm_campaign=Nov18)
 我们的常驻数据库专家将指导您按以下步骤完成为MongoDB集合创建有效JSON模式，并详细介绍了样本数据集。 请亲自尝试一下。
-(https://copm.s3.amazonaws.com/6c489049.png)
+![STUDIO 3T](https://copm.s3.amazonaws.com/6c489049.png)
 
 `STUDIO 3T` *赞助商*
 
