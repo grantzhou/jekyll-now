@@ -14,19 +14,19 @@ title: 数据库每周新闻 2019-1-3
 
 # 幕后的三种看法..
 
-## [Fortnite的大规模数据分析管道内部](https://www.datanami.com/2018/07/31/inside-fortnites-massive-data-analytics-pipeline/)
+## [Fortnite的大规模数据分析管道揭秘](https://www.datanami.com/2018/07/31/inside-fortnites-massive-data-analytics-pipeline/)
 广受欢迎的多人游戏如何保存所有数据来维持运行，令我惊讶的是，这是2018年我们点击最多的链接🙂
 
 `DATANAMI`
 
-## [GitHub上的MySQL高可用性](https://githubengineering.com/mysql-high-availability-at-github/)
-GitHub使用MySQL作为所有非git相关事物的主要数据存储区，因此它是一个需要保持稳定的关键基础架构。 这篇文章深入探讨了如何让MySQL高度可用，并证明你们都喜欢出色的案例研究。。
+## [GitHub上的MySQL高可用](https://githubengineering.com/mysql-high-availability-at-github/)
+MySQL是GitHub用于所有非git相关工作的主要数据存储参考，因此它是基础架构的关键部分，并且需要持续在线。这篇文章深入探讨了如何让MySQL高度可用，并给出了一个你们都喜欢的优秀案例研究。
 
 `SHLOMI NOACH(GITHUB)`
 
 ## 📈[工程领导力的数据驱动指南](https://www.gitprime.com/resources-data-driven-engineering-metrics/?utm_source=dbwk&utm_medium=email-nl&utm_campaign=dbwk(q1))
 交付速度更快，是因为你知道的更多，而不是因为你匆忙。从700万次提交和85,000多名软件工程师那里获得可操作的见解，以提高团队的速度。
-[观看演示](https://www.gitprime.com/resources-data-driven-engineering-metrics/?utm_source=dbwk&utm_medium=email-nl&utm_campaign=dbwk(q1))
+[下载免费指南](https://www.gitprime.com/resources-data-driven-engineering-metrics/?utm_source=dbwk&utm_medium=email-nl&utm_campaign=dbwk(q1))
 
 `GITPRIME` **赞助商**
 
@@ -57,8 +57,8 @@ Redis以非常快速的键值存储而闻名，但除此之外还有更多，特
 
 `DATANAMI`
 
-## [满足基础设备访问的Api：Strongdm](https://www.strongdm.com/dbw-01-04-19/?utm_source=&utm_medium=email&utm_campaign=2019-01-04%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20DBW-LPA-JAN)
-使用现有SSO管理对数据库和服务器的访问。减少麻烦。审核员的即时答案。[观看演示](https://www.gitprime.com/resources-data-driven-engineering-metrics/?utm_source=dbwk&utm_medium=email-nl&utm_campaign=dbwk(q1))
+## [认识基础设施访问API：Strongdm](https://www.strongdm.com/dbw-01-04-19/?utm_source=&utm_medium=email&utm_campaign=2019-01-04%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20DBW-LPA-JAN)
+使用现有SSO管理对数据库和服务器的访问。为减少麻烦起见，给审核员的即时答案。[观看演示](https://www.gitprime.com/resources-data-driven-engineering-metrics/?utm_source=dbwk&utm_medium=email-nl&utm_campaign=dbwk(q1))
 
 `STRONGDM` **赞助商**
 
