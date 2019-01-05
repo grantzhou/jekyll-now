@@ -25,7 +25,8 @@ GitHub使用MySQL作为所有非git相关事物的主要数据存储区，因此
 `SHLOMI NOACH(GITHUB)`
 
 ## 📈[工程领导力的数据驱动指南](https://www.gitprime.com/resources-data-driven-engineering-metrics/?utm_source=dbwk&utm_medium=email-nl&utm_campaign=dbwk(q1))
-交付速度更快，是因为你知道的更多，而不是因为你匆忙。从700万次提交和85,000多名软件工程师那里获得可操作的见解，以提高团队的速度。[免费指南](https://www.gitprime.com/resources-data-driven-engineering-metrics/?utm_source=dbwk&utm_medium=email-nl&utm_campaign=dbwk(q1)
+交付速度更快，是因为你知道的更多，而不是因为你匆忙。从700万次提交和85,000多名软件工程师那里获得可操作的见解，以提高团队的速度。
+[观看演示](https://www.gitprime.com/resources-data-driven-engineering-metrics/?utm_source=dbwk&utm_medium=email-nl&utm_campaign=dbwk(q1))
 
 `GITPRIME` **赞助商**
 
@@ -57,7 +58,7 @@ Redis以非常快速的键值存储而闻名，但除此之外还有更多，特
 `DATANAMI`
 
 ## [满足基础设施访问Api：Strongdm](https://www.strongdm.com/dbw-01-04-19/?utm_source=&utm_medium=email&utm_campaign=2019-01-04%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20DBW-LPA-JAN)
-使用现有SSO管理对数据库和服务器的访问。减少麻烦。审核员的即时答案。[观看演示](https://www.strongdm.com/dbw-01-04-19/?utm_source=&utm_medium=email&utm_campaign=2019-01-04%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20DBW-LPA-JAN)
+使用现有SSO管理对数据库和服务器的访问。减少麻烦。审核员的即时答案。[观看演示](https://www.gitprime.com/resources-data-driven-engineering-metrics/?utm_source=dbwk&utm_medium=email-nl&utm_campaign=dbwk(q1))
 
 `STRONGDM` **赞助商**
 
