@@ -20,13 +20,14 @@ PostgreSQL每年都会发布一个新版本。新版本的开发工作能够顺�
 
 `CRAIG KERSTIENS`
 
-## [因为您的数据是您的业务](https://pgexperts.com/)
+## [数据是您的业务根本](https://pgexperts.com/)
 ![img](https://copm.s3.amazonaws.com/27676a9c.png)
+
 PGX的开源专家提供解决数据库问题，加速现有应用程序，重构基础架构和开发新应用程序所需的数据库和应用程序技能。
 
 `POSTGRESQL EXPERTS, INC.` **赞助商**
 
-## [发掘隐藏的PostgreSQL11宝石](https://www.cybertec-postgresql.com/en/unearthing-some-hidden-postgresql-11-gems/)
+## [发掘隐藏的PostgreSQL11宝藏](https://www.cybertec-postgresql.com/en/unearthing-some-hidden-postgresql-11-gems/)
 Postgres 11仅仅发布了三个月，所以仍然需要时间来挖掘它的所有新功能。Kaarel Moppel就是这么做的，并且分享了一些他感兴趣的部分。
 
 `KAAREL MOPPEL`
@@ -51,7 +52,7 @@ Postgres 11仅仅发布了三个月，所以仍然需要时间来挖掘它的所
 `ACHILLEAS MANTZIOS`
 
 ## [pgDash对PostgreSQL的诊断和监控](https://pgdash.io/features)
-性能最大化并深入了解PostgreSQL部署。查看诊断，监控核心功能，与您的团队共享。
+将PostgreSQL性能最大化，并深入了解PostgreSQL部署。查看诊断，监控核心功能，与您的团队共享。
 
 `PGDASH` **赞助商**
 
@@ -60,31 +61,33 @@ Postgres 11仅仅发布了三个月，所以仍然需要时间来挖掘它的所
 `DMITRY SHVETSOV`
 
 ## [pgqr:Postgres的QR码生成扩展](https://abdulyadi.wordpress.com/2019/01/12/pgqr-a-qr-code-generator/)
-我们仍在努力弄清楚为什么这是有用的，但如果你需要它，你需要这篇文章.. :-)
+我们仍在努力弄清楚为什么这个很有用，但如果你需要它，那你就需要这篇文章.. :-)
 
 `ABDUL YADI`
 
-# 本周提示
+# :information_source: 本周提示
 
-找出哪些表需要额外的索引
+>找出哪些表需要额外的索引
 
-pg_stat_user_tables是一个出色的系统视图，可以向我们展示有关数据库中表的宝贵信息，并可用于诊断性能问题。last_autovacuum和n_dead_tup等vacuum统计信息将显示是否存在未被vacuum的表，如果未执行HOT更新，则显示n_tup_hot_upd。
+>pg_stat_user_tables是一个出色的系统视图，可以向我们展示有关数据库中表的宝贵信息，并可用于诊断性能问题。last_autovacuum和n_dead_tup等vacuum统计信>息将显示是否存在未被vacuum的表，如果未执行HOT更新，则显示n_tup_hot_upd。
 
-但是，首先要考虑的是，是否存在需要新索引的表，因为这会对数据库的整体性能产生重大影响：
+>但是，首先要考虑的是，是否存在需要新索引的表，因为这会对数据库的整体性能产生重大影响：
 
+```
 SELECT relname,  
     seq_scan,  
     seq_tup_read,  
     idx_scan  
 FROM pg_stat_user_tables  
 WHERE seq_scan > 0  
-ORDER BY 3 DESC LIMIT 10;  
+ORDER BY 3 DESC LIMIT 10; 
 
-这个简单的查询将有助于突显重顺序扫描的表以及需要添加索引的潜在候选者。
+```
+>这个简单的查询将有助于突显重顺序扫描的表以及需要添加索引的潜在候选者。
 
-通过查看seq_scan结果，您可以准确地看到表上发生了多少次顺序扫描。然后查看seq_tup_read，您可以看到在这些扫描期间多少个元组正在被读取。如果某些表上的数字明显更高，则可能非常需要一些额外的索引。
+>通过查看seq_scan结果，您可以准确地看到表上发生了多少次顺序扫描。然后查看seq_tup_read，您可以看到在这些扫描期间多少个元组正在被读取。如果某些表上的>数字明显更高，则可能非常需要一些额外的索引。
 
-这个“本周提示”由Peter Tormey @ SoFi 提供，并由[strongDM](https://www.strongdm.com/?utm_source&utm_medium=email&utm_campaign=2019-01-16%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20PGW-TIP-JAN)赞助。
-SoFi依靠strongDM来管理和保护对数据库和服务器的访问。[了解有关strongDM的更多信息](https://www.strongdm.com/?utm_source&utm_medium=email&utm_campaign=2019-01-16%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20PGW-TIP-JAN)
+>这个“本周提示”由Peter Tormey @ SoFi 提供，并由[strongDM](https://www.strongdm.com/?utm_source&utm_medium=email&utm_campaign=2019-01-16%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20PGW-TIP-JAN)赞助。
+>SoFi依靠strongDM来管理和保护对数据库和服务器的访问。[了解有关strongDM的更多信息](https://www.strongdm.com/?utm_source&utm_medium=email&utm_campaign=2019-01-16%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20PGW-TIP-JAN)
 
-如果您对“本周提示”有任何想法，[请联系我们](https://cooperpress.typeform.com/to/bTSq7v) —— 一经采用，我们将为您的“提示”支付50美元。
+>如果您对“本周提示”有任何想法，[请联系我们](https://cooperpress.typeform.com/to/bTSq7v) —— 一经采用，我们将为您的“提示”支付50美元。
