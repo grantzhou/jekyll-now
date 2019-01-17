@@ -65,7 +65,7 @@ Postgres 11仅仅发布了三个月，所以仍然需要时间来挖掘它的所
 
 `ABDUL YADI`
 
-# ![_config.yml]({{ site.baseurl }}/images/Tips-icon.png) 本周提示 
+#  本周提示 ![_config.yml]({{ site.baseurl }}/images/Tips-icon.png)
  
 找出哪些表需要额外的索引
 pg_stat_user_tables是一个出色的系统视图，可以向我们展示有关数据库中表的宝贵信息，并可用于诊断性能问题。last_autovacuum和n_dead_tup等vacuum统计信>息将显示是否存在未被vacuum的表，如果未执行HOT更新，则显示n_tup_hot_upd。
