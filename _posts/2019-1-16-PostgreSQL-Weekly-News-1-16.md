@@ -70,8 +70,8 @@ Postgres 11仅仅发布了三个月，所以仍然需要时间来挖掘它的所
 >找出哪些表需要额外的索引
 >pg_stat_user_tables是一个出色的系统视图，可以向我们展示有关数据库中表的宝贵信息，并可用于诊断性能问题。last_autovacuum和n_dead_tup等vacuum统计信>息将显示是否存在未被vacuum的表，如果未执行HOT更新，则显示n_tup_hot_upd。
 >但是，首先要考虑的是，是否存在需要新索引的表，因为这会对数据库的整体性能产生重大影响：
-
-```
+>
+>```
 SELECT relname,  
     seq_scan,  
     seq_tup_read,  
@@ -80,7 +80,7 @@ FROM pg_stat_user_tables
 WHERE seq_scan > 0  
 ORDER BY 3 DESC LIMIT 10; 
 ```
-
+>
 >这个简单的查询将有助于突显重顺序扫描的表以及需要添加索引的潜在候选者。
 >通过查看seq_scan结果，您可以准确地看到表上发生了多少次顺序扫描。然后查看seq_tup_read，您可以看到在这些扫描期间多少个元组正在被读取。如果某些表上的>数字明显更高，则可能非常需要一些额外的索引。
 >这个“本周提示”由Peter Tormey @ SoFi 提供，并由[strongDM](https://www.strongdm.com/?utm_source&utm_medium=email&utm_campaign=2019-01-16%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20PGW-TIP-JAN)赞助。
