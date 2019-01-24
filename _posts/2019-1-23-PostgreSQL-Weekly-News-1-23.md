@@ -92,6 +92,7 @@ Postico是一种商业产品（试用版），但外观优雅，像Mac一样。
   ('Brendan', 'Office', '2019-01-01', '2019-01-31');
  ```
  >如果我们现在尝试在任何重叠时间将Brendan放在不同的位置，则约束将不允许：
+ 
  ```
  INSERT INTO employee_locations 
   (name, location, start_date, end_date) 
@@ -100,6 +101,7 @@ VALUES
 
 ERROR: conflicting key value violates exclusion constraint "unique_location_date_range"
  ```
+ 
  
 >这个"本周提示“由[strongDM](https://www.strongdm.com/?utm_source&utm_medium=email&utm_campaign=2019-01-16%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20PGW-TIP-JAN)赞助提供，保护对服务器/数据库的访问的最佳方法。
 >[安排10分钟的演示](https://www.strongdm.com/?utm_source&utm_medium=email&utm_campaign=2019-01-16%20-%20%5BNL%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20PGW-TIP-JAN)
