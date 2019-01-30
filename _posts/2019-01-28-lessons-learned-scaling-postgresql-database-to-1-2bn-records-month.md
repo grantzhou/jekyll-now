@@ -1,3 +1,8 @@
+---
+layout: post
+title: Lessons learned scaling PostgreSQL database to 1.2bn records/month
+---
+
 ## Lessons learned scaling PostgreSQL database to 1.2bn records/month
 ### Choosing where to host the database, materialising data and using database as a job queue
 Go to the profile of Gajus Kuizinas
