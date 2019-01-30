@@ -3,7 +3,7 @@ layout: post
 title: PostgreSQL 每周新闻 2019-1-30
 ---
 
-### PostgreSQL每周新闻#289 - 2019年1月30日
+### PostgreSQL每周新闻#290 - 2019年1月30日
 ![_config.yml]({{ site.baseurl }}/images/PostgresWeekly.png)
 
 备注：[英文原文地址](https://postgresweekly.com/issues/290)
@@ -26,7 +26,7 @@ Citus以其同名的Postgres扩展而闻名，这使得Postgres更容易横向�
 ## [在PostgreSQL环境中诊断和解决性能问题](https://www.quest.com/products/foglight-for-postgresql/?utm_source=&utm_medium=Direct-External+Online+Advertising&utm_campaign=FY2019_Q4_AMER_DBPerf_CooperPress_FoglightPostgres_Jan_eNewsletter_ADV&utm_term=&utm_content=cooper-press-enewsletter)
 ![quest](https://copm.s3.amazonaws.com/2100ff85.jpg)
 
-管理基础架构的运行状况。 直观的基于Web的仪表板提醒您注意可能影响性能或可用性的问题，清晰的企业范围视图可帮助您优化整个PostgreSQL环境。 下载免费试用版。
+管理基础架构的运行状况。 直观的基于Web的仪表板提醒您注意可能影响性能或可用性的问题，清晰的企业范围视图可帮助您优化整个PostgreSQL环境。 [下载免费试用版。](https://www.quest.com/register/110829/)
 
 `QUEST SOFTWARE` *赞助商*
 
@@ -68,7 +68,8 @@ Postgres如何在幕后工作的图表。 您可以单击每个项目以获取�
 # ![_config.yml]({{ site.baseurl }}/images/Tips-icon.png)   本周提示
 
 如何可视化您的查询计划
-[v plan](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/n5lbz4p2vrgwjxh1nvin.jpg)
+
+![v plan](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/n5lbz4p2vrgwjxh1nvin.jpg)
 
 [*EXPLAIN命令*](https://www.postgresql.org/docs/current/sql-explain.html)显示Postgres的计划程序为提供的SQL语句生成的执行计划，该语句允许您查看获取所需结果所需的方法。 是否使用了索引（以及哪些索引），加入了哪些表，使用了哪些连接算法等等。
 
