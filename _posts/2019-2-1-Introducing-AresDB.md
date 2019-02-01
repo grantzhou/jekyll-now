@@ -25,7 +25,7 @@ AresDB于2018年11月发布，是一个开源的实时分析引擎，利用非�
 - 根据我们收集的汇总指标做出自动决策（例如[旅行定价](https://www.uber.com/drive/partner-app/how-surge-works/)和[欺诈检测](https://eng.uber.com/advanced-technologies-detecting-preventing-fraud-uber/)）
 - 进行即席查询以诊断和解决业务运营问题
 
-|   | 仪表板Dashboard | 决策系统Decision Systems | 即席查询 Ad Hoc Queries |
+| ---  | 仪表板Dashboard | 决策系统Decision Systems | 即席查询 Ad Hoc Queries |
 | :---: | :---: | :---: | :---: |
 | **查询模式** | 已知 | 已知 | 随意 |
 | **查询QPS** | 高 | 高 | 低 |
