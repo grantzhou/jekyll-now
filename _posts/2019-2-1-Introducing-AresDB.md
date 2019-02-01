@@ -198,6 +198,55 @@ AresDB利用预过滤器在将存档数据发送到GPU进行并行处理之前�
 *<p align="center">图9：AresDB在将列式数据发送到GPU进行处理之前对其进行预过滤。</p>*
 
 
+在预先过滤之后，仅需要将绿色值（满足过滤条件）推送到GPU以进行并行处理。 输入数据被送到到GPU并一次一批地执行。 这包括实时批次和归档批次。
+
+AresDB利用[CUDA流](https://devblogs.nvidia.com/gpu-pro-tip-cuda-7-streams-simplify-concurrency/)进行流水线数据提供和执行。 在每个查询上交替使用两个流以在两个重叠阶段中进行处理。 在下面的图10中，我们提供了此过程的时间表说明：
+![pic 10](https://eng.uber.com/wp-content/uploads/2019/01/image8-2.png)
+*<p align="center">图10：使用AresDB，两个CUDA流交替进行数据传输和处理。</p>*
+
+## 查询执行
+
+为简单起见，AresDB利用[Thrust库](https://developer.nvidia.com/thrust)来实现查询执行过程，该过程提供了精细调整的并行算法构建块，以便在当前查询引擎中快速实现。
+
+在Thrust中，使用随机访问迭代器访问输入和输出向量数据。 每个GPU线程寻找输入迭代器到其工作负载位置，读取值并执行计算，然后将结果写入输出迭代器上的相应位置。
+
+AresDB遵循每个内核的一个运算符（OOPK）模型来评估表达式。
+
+下面的图11演示了一个示例AST的过程，它是在查询编译阶段通过维度表达式`request_at  -  request_at％86400`生成的：
+![pic 11](https://eng.uber.com/wp-content/uploads/2019/01/image7-1.png)
+*<p align="center">图11：AresDB利用OOPK模型模型进行表达式评估。</p>*
+
+在OOPK模型中，AresDB查询引擎遍历AST树的每个叶节点并返回其父节点的迭代器。 如果根节点也是叶子，则直接在输入迭代器上执行根操作。
+
+在每个非根非叶节点（在该示例中为[模运算](https://en.wikipedia.org/wiki/Modulo_operation)），分配临时临时空间向量以存储从`request_at％86400`表达式产生的中间结果。 利用Thrust，启动内核函数来计算GPU上此运算符的输出。 结果存储在临时空间迭代器中。
+
+在根节点处，以与非根非叶节点相同的方式启动内核函数。 根据表达式类型采取不同的输出操作，详述如下：
+- 过滤动作以减少输入向量的基数
+- 将维度输出写入维度向量以供以后聚合
+- 将度量输出写入度量向量以供以后聚合
+
+在表达评估之后，执行排序和减少以进行最终聚合。 在排序和缩减操作中，我们使用维度向量的值作为排序和缩减的关键值，并使用度量向量的值作为要聚合的值。 通过这种方式，具有相同维度值的行将组合在一起并进行聚合。 下面的图12描述了这种分类和减少过程：
+![pic 12](https://eng.uber.com/wp-content/uploads/2019/01/image22.png)
+*<p align="center">图12：在表达式评估之后，AresDB按维度（键值）和度量（值）向量上的键值对数据进行排序和减少。</p>*
+
+
+AresDB还支持以下高级查询功能：
+- Join：目前AresDB支持从事实表到维度表的散列连接
+- Hyperloglog基数估计：AresDB实现Hyperloglog算法
+- Geo Intersect：当前AresDB仅支持GeoPoint和GeoShape之间的交叉操作
+
+## 资源管理
+作为基于内存的数据库，AresDB需要管理以下类型的内存使用：
+| --- | 分配 | 管理模式 |
+| --- | --- | --- |
+| 实时存储矢量（实时存储列式数据）| C |	Tracked| 
+| 存档存储矢量（存档存储列数据）| C |管理（负载和驱逐）Managed (Load and eviction) |
+| 主键索引（记录重复数据删除的哈希表）| C |	Tracked |
+| 回填队列（存储“迟到”数据等待回填）| Golang | Tracked |
+| 归档/回填过程临时存储（归档和回填过程中分配的临时内存） | C |	Tracked |
+| 摄取/查询临时存储; |
+| 流程开销; | Golang和C | 静态配置估计 |
+| 分配碎片 | | |
 
 
 
