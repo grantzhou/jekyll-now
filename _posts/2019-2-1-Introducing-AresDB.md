@@ -49,7 +49,8 @@ AresDB于2018年11月发布，是一个开源的实时分析引擎，利用非�
 ## 利用GPU进行实时分析
 为了以高帧速率渲染图像的逼真视图，GPU高速并行处理大量几何和像素。 虽然处理单元的时钟速率在过去几年中已经趋于稳定，但芯片上的晶体管数量仅根据摩尔定律增加。 因此，以千兆浮点每秒（GFLOP/s）为单位测量的GPU计算速度正在迅速增加。 下面的图1描述了多年来比较NVIDIA GPU和Intel CPU的理论GFLOP/s趋势：
 ![pic 1](https://eng.uber.com/wp-content/uploads/2019/01/image11-2-1068x559.png)
-*<p align="center">图1：多年来CPU和GPU单精度浮点性能的比较。 图片取自Nvidia的CUDA C编程指南。</p>*
+
+*图1：多年来CPU和GPU单精度浮点性能的比较。 图片取自Nvidia的CUDA C编程指南。*
 
 在设计我们的实时分析查询引擎时，集成GPU处理非常适合。 在优步，典型的实时分析查询处理数天到数十亿条记录的数天数据，然后在短时间内过滤和汇总它们。 此计算任务非常适合通用GPU的并行处理模型，因为它们：
 
@@ -68,7 +69,8 @@ AresDB于2018年11月发布，是一个开源的实时分析引擎，利用非�
 ## AresDB架构概述
 从大方面来讲，AresDB将其大部分数据存储在主机内存（连接到CPU的RAM）中，使用CPU处理数据摄取和通过磁盘恢复数据。 在查询时，AresDB将数据从主机内存传输到GPU内存，以便在GPU上进行并行处理。 如下面的图2所示，AresDB由内存存储，元数据存储和磁盘存储组成：
 ![pic 2](https://eng.uber.com/wp-content/uploads/2019/01/image20-1068x605.png)
-*<p align="center">图2：AresDB单实例体系结构具有内存和磁盘存储以及元存储。</p>*
+
+*图2：AresDB单实例体系结构具有内存和磁盘存储以及元存储。*
 
 ### 表 Tables
 与大多数关系数据库管理系统（RDBMS）不同，AresDB中没有数据库或模式范围。 所有表都属于同一AresDB集群/实例中的相同作用域，使用户可以直接引用它们。 用户将其数据存储为事实表和维度表。
@@ -109,18 +111,19 @@ AresDB以列式格式存储所有数据。 每列的值存储为列式值向量�
 AresDB在实时存储中存储未压缩和未排序的列式数据（实时向量）。 实时存储中的数据记录被划分为（实时）批量配置容量。 在摄取时创建新批次，而在归档记录后清除旧批次。 主键索引用于查找重复数据删除和更新的记录。 下面的图3演示了我们如何组织实时记录并使用主键值来定位它们：
 ![pic 3](https://eng.uber.com/wp-content/uploads/2019/01/image23.png)
 
-*<p align="center">图3：我们使用主键值来定位每个记录的批次和批次位置。</p>*
+*图3：我们使用主键值来定位每个记录的批次和批次位置。*
 
 批次中每列的值存储为列式矢量。 每个值向量中的值的有效性/无效性被存储为单独的空向量，每个值的有效性由一位表示。 在下面的图4中，我们提供了一个包含city_id列的五个值的示例：
 ![pic 4](https://eng.uber.com/wp-content/uploads/2019/01/image3-4-e1548709370771-1068x783.png)
-*<p align="center">图4：我们为数据表中的未压缩列存储值（实际值）和空向量（有效性）。</p>*
+*图4：我们为数据表中的未压缩列存储值（实际值）和空向量（有效性）。*
 
 ### 归档存储
 AresDB还通过事实表将成熟，排序和压缩的列式数据（存档向量）存储在存档存储中。 归档存储中的记录也分为批次。 与实时批处理不同，存档批处理包含特定世界时协调（UTC）日的记录。 存档批处理使用自Unix Epoch以来的天数作为其批处理ID。
 
 记录按照用户配置的列排序顺序进行排序。 如下面的图5所示，我们首先按city_id列排序，然后是状态列：
 ![pic 5](https://eng.uber.com/wp-content/uploads/2019/01/image16-1-e1548709469337-1055x420.png)
-*<p align="center">图5：我们按行所有行排序bycity_id，然后是status，然后使用行程编码压缩每列。 每个列在排序和压缩后都有一个计数向量。</p>*
+
+*图5：我们按行所有行排序bycity_id，然后是status，然后使用行程编码压缩每列。 每个列在排序和压缩后都有一个计数向量。*
 
 配置用户配置的列排序顺序的目标是：
 
@@ -136,7 +139,8 @@ AresDB还通过事实表将成熟，排序和压缩的列式数据（存档向�
 
 当AresDB收到一个用于摄取的upsert批处理时，它首先将upsert批处理写入重做日志以进行恢复。 将upsert批处理附加到重做日志的末尾后，AresDB会识别并跳过事实表上的延迟记录，以便提取到实时存储中。 如果记录的事件时间早于存档的截止事件时间，则该记录被视为“迟到”。 对于不被视为“迟到”的记录，AresDB使用主键索引在应用于应用程序的实时存储中查找批处理。 如下面的图6所示，全新记录（以前未见过的基于主键值）将应用于空白区域，而现有记录将直接更新：
 ![pic 6](https://eng.uber.com/wp-content/uploads/2019/01/image10-2.png)
-*<p align="center">图6：在摄取期间，在将upsert批处理附加到重做日志之后，“late”记录将附加到回填队列，而其他记录将应用于实时存储。</p>*
+
+*图6：在摄取期间，在将upsert批处理附加到重做日志之后，“late”记录将附加到回填队列，而其他记录将应用于实时存储。*
 
 ## 存档
 在摄取时，记录将在实时存储中追加/更新，或者附加到等待放入存档存储的回填队列中。
@@ -148,7 +152,8 @@ AresDB还通过事实表将成熟，排序和压缩的列式数据（存档向�
 下面的图7描述了基于给定记录的事件时间的时间线：
 
 ![pic 7](https://eng.uber.com/wp-content/uploads/2019/01/image14.png)
-*<p align="center">图7：我们使用事件时间和截止时间来确定哪些记录是新的（实时）和旧的（事件时间早于归档截止）。</p>*
+
+*图7：我们使用事件时间和截止时间来确定哪些记录是新的（实时）和旧的（事件时间早于归档截止）。*
 
 在此方案中，归档间隔是两次归档运行之间的时间，而归档延迟是事件时间之后但在归档事件之前的持续时间。 两者都在AresDB的表模式配置中定义
 
@@ -187,7 +192,8 @@ AresDB还通过事实表将成熟，排序和压缩的列式数据（存档向�
 
 我们在下面的图8中描述了AQL查询执行流程：
 ![pic 8](https://eng.uber.com/wp-content/uploads/2019/01/image19.png)
-*<p align="center">图8：AresDB的查询执行流程利用我们自己开发的AQL查询语言进行快速，高效的数据处理和检索。</p>*
+
+*图8：AresDB的查询执行流程利用我们自己开发的AQL查询语言进行快速，高效的数据处理和检索。*
 
 ### 查询编译
 AQL查询被编译到内部查询上下文中。 过滤器，维度和度量中的表达式被解析为抽象语法树（AST），以便稍后通过GPU进行处理。
@@ -195,14 +201,16 @@ AQL查询被编译到内部查询上下文中。 过滤器，维度和度量中�
 ### 数据馈送
 AresDB利用预过滤器在将存档数据发送到GPU进行并行处理之前对其进行廉价过滤。 由于归档数据是根据配置的列顺序排序的，因此某些过滤器可能能够通过应用二进制搜索来定位相应的匹配范围来利用此排序顺序。 特别是，所有第一个X排序列上的等效过滤器和排序X + 1列上的可选范围过滤器可以作为预过滤器处理，如下面的图9所示：
 ![pic sort](https://eng.uber.com/wp-content/uploads/2019/01/image13-2.png)
-*<p align="center">图9：AresDB在将列式数据发送到GPU进行处理之前对其进行预过滤。</p>*
+
+*图9：AresDB在将列式数据发送到GPU进行处理之前对其进行预过滤。*
 
 
 在预先过滤之后，仅需要将绿色值（满足过滤条件）推送到GPU以进行并行处理。 输入数据被送到到GPU并一次一批地执行。 这包括实时批次和归档批次。
 
 AresDB利用[CUDA流](https://devblogs.nvidia.com/gpu-pro-tip-cuda-7-streams-simplify-concurrency/)进行流水线数据提供和执行。 在每个查询上交替使用两个流以在两个重叠阶段中进行处理。 在下面的图10中，我们提供了此过程的时间表说明：
 ![pic 10](https://eng.uber.com/wp-content/uploads/2019/01/image8-2.png)
-*<p align="center">图10：使用AresDB，两个CUDA流交替进行数据传输和处理。</p>*
+
+*图10：使用AresDB，两个CUDA流交替进行数据传输和处理。*
 
 ## 查询执行
 
@@ -214,7 +222,8 @@ AresDB遵循每个内核的一个运算符（OOPK）模型来评估表达式。
 
 下面的图11演示了一个示例AST的过程，它是在查询编译阶段通过维度表达式`request_at  -  request_at％86400`生成的：
 ![pic 11](https://eng.uber.com/wp-content/uploads/2019/01/image7-1.png)
-*<p align="center">图11：AresDB利用OOPK模型模型进行表达式评估。</p>*
+
+*图11：AresDB利用OOPK模型模型进行表达式评估。*
 
 在OOPK模型中，AresDB查询引擎遍历AST树的每个叶节点并返回其父节点的迭代器。 如果根节点也是叶子，则直接在输入迭代器上执行根操作。
 
@@ -227,7 +236,8 @@ AresDB遵循每个内核的一个运算符（OOPK）模型来评估表达式。
 
 在表达评估之后，执行排序和减少以进行最终聚合。 在排序和缩减操作中，我们使用维度向量的值作为排序和缩减的关键值，并使用度量向量的值作为要聚合的值。 通过这种方式，具有相同维度值的行将组合在一起并进行聚合。 下面的图12描述了这种分类和减少过程：
 ![pic 12](https://eng.uber.com/wp-content/uploads/2019/01/image22.png)
-*<p align="center">图12：在表达式评估之后，AresDB按维度（键值）和度量（值）向量上的键值对数据进行排序和减少。</p>*
+
+*图12：在表达式评估之后，AresDB按维度（键值）和度量（值）向量上的键值对数据进行排序和减少。*
 
 
 AresDB还支持以下高级查询功能：
@@ -247,6 +257,236 @@ AresDB还支持以下高级查询功能：
 | 摄取/查询临时存储; |
 | 流程开销; | Golang和C | 静态配置估计 |
 | 分配碎片 | | |
+
+当AresDB投入生产时，它会利用配置的总内存预算。 此预算由所有六种内存类型共享，并且还应为操作系统和其他进程留出足够的空间。 此预算还包括静态配置的开销估计，服务器监控的实时数据存储以及服务器可根据剩余内存预算决定加载和驱逐的归档数据。
+
+下面的图13描绘了AresDB主机内存模型：
+![pic 13](https://eng.uber.com/wp-content/uploads/2019/01/image12-2.png)
+
+*图13：AresDB管理自己的内存使用情况，使其不超过配置的总进程预算。*
+
+AresDB允许用户在事实表的列级别配置预加载日期和优先级，并且仅在预加载日期内预加载存档数据。非预装数据按需从磁盘加载到内存中。一旦完成，AresDB还会从主机内存中驱逐归档数据。 AresDB的驱逐策略基于预加载天数，列优先级，批次日期和列大小。
+
+AresDB还管理多个GPU设备并将设备资源建模为GPU线程和设备内存，跟踪GPU内存使用情况作为处理查询。 AresDB通过设备管理器管理GPU设备，设备管理器在两个维度（GPU线程和设备内存）中对GPU设备资源进行建模，并在处理查询时跟踪使用情况。在查询编译之后，AresDB使用户能够估计执行查询所需的资源量。在允许查询开始之前，必须满足设备内存要求;如果在任何设备上当时没有足够的内存，则查询必须等待才能运行。目前，AresDB可以同时在同一GPU设备上运行一个或多个查询，只要该设备满足所有资源要求即可。
+
+在当前的实现中，AresDB不会将输入数据缓存在设备内存中，以便在多个查询中重用。 AresDB的目标是支持对实时不断更新且难以正确缓存的数据集的查询。我们打算在AresDB的未来迭代中实现数据缓存功能GPU内存，这一步骤将有助于优化查询性能。
+
+## 使用案例：优步的摘要仪表板
+在优步，我们使用AresDB构建仪表板，以提取实时业务洞察 （business insights）。 AresDB扮演着通过持续更新存储最新原始事件的角色，并使用低功耗的GPU功能在几秒钟内计算针对它们的关键指标，以便用户可以交互使用仪表板。 例如，在数据存储中具有较长周期的匿名旅行数据由多种服务更新，包括我们的调度，支付和评级系统。 为了有效地利用旅行数据，用户将数据切片并切成不同的维度，以获得实时决策的见解。
+
+利用AresDB，Uber的摘要仪表板是一个广泛使用的分析仪表板，由公司各团队利用，以检索相关的产品指标并实时响应以改善用户体验。
+![pic 14](https://eng.uber.com/wp-content/uploads/2019/01/image18.png)
+
+*图14：Uber Summary Dashboard的每小时视图使用AresDB查看特定时间段内的实时数据分析。*
+
+为了构建上面的模型仪表板，我们对以下表进行了建模：
+
+### Trips（事实表）
+| trip_id | request_at | city_id | status | driver_id | fare |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 1542058870 |	1 |	completed |	2 |	8.5 |
+| 2 |	1541977200 |	1 |	rejected  |	3 |	10.75 |
+| ... | | | | | |
+
+### Cities （维度表）
+| city_id | city_name | timezone | 
+| --- | --- | --- |
+| 1	| San Francisco	| America/Los_Angeles |
+| 2	| New York |	America/New_York |
+| ... | | |
+
+### AresDB中的表结构
+要创建上述两个建模表，我们首先需要在AresDB中创建在以下结构的表：
+| Trips |	Cities |
+| --- | --- |
+| ```{
+ “name”: “trips”,
+ “columns”: [
+   {
+     “name”: “request_at”,
+     “type”: “Uint32”,
+   },
+   {
+     “name”: “trip_id”,
+     “type”: “UUID”
+   },
+   {
+     “name”: “city_id”,
+     “type”: “Uint16”,
+   },
+   {
+     “name”: “status”,
+     “type”: “SmallEnum”,
+   },
+   {
+     “name”: “driver_id”,
+     “type”: “UUID”
+   },
+   {
+     “name”: “fare”,
+     “type”: “Float32”,
+   }
+ ],
+ “primaryKeyColumns”: [
+   1
+ ],
+ “isFactTable”: true,
+ “config”: {
+   “batchSize”: 2097152,
+   “archivingDelayMinutes”: 1440,
+   “archivingIntervalMinutes”: 180,
+  “recordRetentionInDays”: 30
+ },
+ “archivingSortColumns”: [2,3]
+}``` | ``` {
+ “name”: “cities”,
+ “columns”: [
+ {
+     “name”: “city_id”,
+    “type”: “Uint16”,
+   },
+   {
+     “name”: “city_name”,
+     “type”: “SmallEnum”
+   },
+   {
+     “name”: “timezone”,
+     “type”: “SmallEnum”,
+   }
+ ],
+ “primaryKeyColumns”: [
+   0
+ ],
+ “isFactTable”: false,
+ “config”: {
+   “batchSize”: 2097152
+ }
+}``` |
+
+如模式中所述，trips表被创建为事实表，表示实时发生的行程事件，而cities表被创建为维度表，存储有关实际城市的信息。
+
+创建表后，用户可以利用[AresDB客户端库](https://github.com/uber/aresdb/blob/master/client/connector.go#L48)从事件总线（如Apache [Kafka](https://kafka.apache.org/)）或流式或批处理平台（如Apache [Flink](https://flink.apache.org/)或Apache [Spark\(https://spark.apache.org/)）中提取数据。
+
+### 针对AresDB的查询示例
+在模型仪表板中，我们选择两个指标作为示例，总行程票价和活动驾驶员。 在仪表板中，用户可以过滤城市的指标，例如, 旧金山。 要绘制仪表板中显示的过去24小时这两个指标的时间序列，我们可以在AQL中运行以下查询：
+
+| 过去24小时内旧金山的总旅行费用按小时计算 | 过去24小时内旧金山的活跃司机小时数 |
+| --- | --- |
+| ```{
+ “table”: “trips”,
+ “joins”: [
+   {
+     “alias”: “cities”,
+     “name”: “cities”,
+     “conditions”: [
+       “cities.id = trips.city_id”
+     ]
+   }
+ ],
+ “dimensions”: [
+   {
+     “sqlExpression”: “request_at”,
+     “timeBucketizer”: “hour”
+   }
+ ],
+ “measures”: [
+   {
+     “sqlExpression”: “sum(fare)”
+   }
+ ],
+ “rowFilters”: [
+   “status = ‘completed'”,
+   “cities.city_name = ‘San Francisco'”
+ ],
+ “timeFilter”: {
+   “column”: “request_at”,
+   “from”: “24 hours ago”
+ },
+ “timezone”: “America/Los_Angeles”
+}``` | ``` {
+ “table”: “trips”,
+ “joins”: [
+   {
+     “alias”: “cities”,
+     “name”: “cities”,
+     “conditions”: [
+       “cities.id = trips.city_id”
+     ]
+   }
+ ],
+ “dimensions”: [
+   {
+     “sqlExpression”: “request_at”,
+     “timeBucketizer”: “hour”
+   }
+ ],
+ “measures”: [
+   {
+     “sqlExpression”: “countDistinctHLL(driver_id)”
+   }
+ ],
+ “rowFilters”: [
+   “status = ‘completed'”,
+   “cities.city_name = ‘San Francisco'”
+ ],
+ “timeFilter”: {
+   “column”: “request_at”,
+   “from”: “24 hours ago”
+ },
+ “timezone”: “America/Los_Angeles”
+} |
+
+###  查询的结果示例：
+
+上述模拟查询将在以下时间序列结果中生成结果，可以很容易地将其绘制到时间序列图中，如下所示：
+
+| 过去24小时内旧金山的总旅行费用按小时计算 | 过去24小时内旧金山的活跃司机小时数 |
+| --- | --- |
+| ```{
+ “results”: [
+   {
+     “1547060400”: 1000.0,
+     “1547064000”: 1000.0,
+     “1547067600”: 1000.0,
+     “1547071200”: 1000.0,
+     “1547074800”: 1000.0,
+     … 
+   }
+ ]
+}``` | ``` {
+ “results”: [
+   {
+     “1547060400”: 100,
+     “1547064000”: 100,
+     “1547067600”: 100,
+     “1547071200”: 100,
+     “1547074800”: 100,
+    …  
+   }
+ ]
+} ``` |
+
+在上面的示例中，我们演示了如何利用AresDB在几秒钟内实时摄取实时发生的原始事件，并立即针对数据发出任意用户查询，以便在亚秒内计算指标。 AresDB可帮助工程师轻松构建数据产品，从而提取对企业至关重要的指标，这些指标需要对人员或机器决策提供实时洞察。
+
+
+## 下一步
+AresDB在优步广泛使用，为我们的实时数据分析仪表板提供支持，使我们能够针对业务的各个方面大规模地制定数据驱动的决策。通过开源这个工具，我们希望社区中的其他人可以利用AresDB进行自己的分析。
+
+在未来，我们打算通过以下功能来增强项目：
+
+- 分布式设计：我们正在构建AresDB的分布式设计，包括复制，分片管理和模式管理，以提高其可扩展性并降低运营成本。
+- 开发人员支持和工具：自2018年11月开源AresDB以来，我们一直致力于构建更直观的工具，重构代码结构，丰富文档以改善入职体验，使开发人员能够快速将AresDB集成到他们的分析堆栈中。
+- 扩展功能集：我们还计划扩展我们的查询功能集，以包括窗口函数和嵌套循环连接等功能，从而允许该工具支持更多用例。
+- 查询引擎优化：我们还将研究开发更高级的方法来优化查询性能，例如低级虚拟机（LLVM）和GPU内存缓存。
+
+AresDB是根据Apache许可证[开源](https://github.com/uber/aresdb)的。我们鼓励您试用AresDB并加入我们的社区。
+
+*如果构建大规模的实时数据分析技术，请考虑申请我们团队的角色。*
+
+
+## 致谢
+
+特别感谢Kate Zhang，Jennifer Anderson，Nikhil Joshi，Abhi Khune，Shengyue Ji，Chinmay Soman，Xiang Fu，David Chen和Li Ning让这个项目取得了圆满成功！
 
 
 
