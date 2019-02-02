@@ -322,7 +322,10 @@ AresDB还管理多个GPU设备并将设备资源建模为GPU线程和设备内�
 要创建上述两个建模表，我们首先需要在AresDB中创建在以下结构的表：
 
 <table>
-  <tr><td>Trips</td><td>Cities</td></tr>
+  <tr>
+    <td>Trips</td>
+    <td>Cities</td>
+  </tr>
   <tr><td>
   <pre><code>{
  “name”: “trips”,
@@ -363,8 +366,10 @@ AresDB还管理多个GPU设备并将设备资源建模为GPU线程和设备内�
   “recordRetentionInDays”: 30
  },
  “archivingSortColumns”: [2,3]
-}</pre></code> </td> 
-    <td> <pre><code> {
+} </code> </pre>
+    </td> 
+    <td>
+      <pre><code> {
  “name”: “cities”,
  “columns”: [
  {
@@ -387,7 +392,7 @@ AresDB还管理多个GPU设备并将设备资源建模为GPU线程和设备内�
  “config”: {
    “batchSize”: 2097152
  }
-}</pre></code></td>
+}</code> </pre></td>
 </tr>
 </table>
 
