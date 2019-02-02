@@ -184,7 +184,7 @@ AresDB还通过事实表将成熟，排序和压缩的列式数据（存档向�
 ## 查询处理
 使用当前实现，用户将需要使用由Uber创建的Ares查询语言（AQL）来对AresDB运行查询。 AQL是一种有效的时间序列分析查询语言，并不像其他类SQL语言那样遵循SELECT FROM WHERE GROUP BY的标准SQL语法。 相反，AQL在结构化字段中指定，可以使用JSON，YAML和Go对象携带。 例如，代替`SELECT count（*）FROM trip GROUP BY city_id WHERE status ='completed' AND request_at >= 1512000000`，JSON中的等效AQL写为：
 
-```js
+<pre><code>
 {
  “table”: “trips”,
  “dimensions”: [
@@ -201,7 +201,7 @@ AresDB还通过事实表将成熟，排序和压缩的列式数据（存档向�
    “from”: “2 days ago”
  }
 }
-```
+</code></pre>
 
 在JSON格式中，AQL为仪表板和决策系统开发人员提供了比SQL更好的编程查询体验，因为它允许他们使用代码轻松编写和操作查询，而无需担心SQL注入等问题。 它作为Web浏览器，前端服务器和后端服务器的典型架构的通用查询格式，一直回到数据库（AresDB）。 此外，AQL提供方便的语法糖，用于时间过滤和bucketization，具有本机时区支持。 该语言还支持隐式子查询等功能，以避免常见的查询错误，并使后端开发人员可以轻松进行查询分析和重写。
 
