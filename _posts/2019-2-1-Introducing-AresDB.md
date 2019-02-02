@@ -227,7 +227,7 @@ AresDB利用预过滤器在将存档数据发送到GPU进行并行处理之前�
 AresDB利用[CUDA流](https://devblogs.nvidia.com/gpu-pro-tip-cuda-7-streams-simplify-concurrency/)进行流水线数据提供和执行。 在每个查询上交替使用两个流以在两个重叠阶段中进行处理。 在下面的图10中，我们提供了此过程的时间表说明：
 ![pic 10](https://eng.uber.com/wp-content/uploads/2019/01/image8-2.png)
 
-*图10：使用AresDB，两个CUDA流交替进行数据传输和处理。*
+*<center>图10：使用AresDB，两个CUDA流交替进行数据传输和处理。</center>*
 
 ## 查询执行
 
@@ -238,9 +238,10 @@ AresDB利用[CUDA流](https://devblogs.nvidia.com/gpu-pro-tip-cuda-7-streams-sim
 AresDB遵循每个内核的一个运算符（OOPK）模型来评估表达式。
 
 下面的图11演示了一个示例AST的过程，它是在查询编译阶段通过维度表达式`request_at  -  request_at％86400`生成的：
+
 ![pic 11](https://eng.uber.com/wp-content/uploads/2019/01/image7-1.png)
 
-*图11：AresDB利用OOPK模型模型进行表达式评估。*
+*<center>图11：AresDB利用OOPK模型模型进行表达式评估。</center>*
 
 在OOPK模型中，AresDB查询引擎遍历AST树的每个叶节点并返回其父节点的迭代器。 如果根节点也是叶子，则直接在输入迭代器上执行根操作。
 
@@ -252,6 +253,7 @@ AresDB遵循每个内核的一个运算符（OOPK）模型来评估表达式。
 - 将度量输出写入度量向量以供以后聚合
 
 在表达评估之后，执行排序和减少以进行最终聚合。 在排序和缩减操作中，我们使用维度向量的值作为排序和缩减的关键值，并使用度量向量的值作为要聚合的值。 通过这种方式，具有相同维度值的行将组合在一起并进行聚合。 下面的图12描述了这种分类和减少过程：
+
 ![pic 12](https://eng.uber.com/wp-content/uploads/2019/01/image22.png)
 
 *图12：在表达式评估之后，AresDB按维度（键值）和度量（值）向量上的键值对数据进行排序和减少。*
@@ -278,6 +280,7 @@ AresDB还支持以下高级查询功能：
 当AresDB投入生产时，它会利用配置的总内存预算。 此预算由所有六种内存类型共享，并且还应为操作系统和其他进程留出足够的空间。 此预算还包括静态配置的开销估计，服务器监控的实时数据存储以及服务器可根据剩余内存预算决定加载和驱逐的归档数据。
 
 下面的图13描绘了AresDB主机内存模型：
+
 ![pic 13](https://eng.uber.com/wp-content/uploads/2019/01/image12-2.png)
 
 *图13：AresDB管理自己的内存使用情况，使其不超过配置的总进程预算。*
@@ -292,13 +295,15 @@ AresDB还管理多个GPU设备并将设备资源建模为GPU线程和设备内�
 在优步，我们使用AresDB构建仪表板，以提取实时业务洞察 （business insights）。 AresDB扮演着通过持续更新存储最新原始事件的角色，并使用低功耗的GPU功能在几秒钟内计算针对它们的关键指标，以便用户可以交互使用仪表板。 例如，在数据存储中具有较长周期的匿名旅行数据由多种服务更新，包括我们的调度，支付和评级系统。 为了有效地利用旅行数据，用户将数据切片并切成不同的维度，以获得实时决策的见解。
 
 利用AresDB，Uber的摘要仪表板是一个广泛使用的分析仪表板，由公司各团队利用，以检索相关的产品指标并实时响应以改善用户体验。
+
 ![pic 14](https://eng.uber.com/wp-content/uploads/2019/01/image18.png)
 
-*图14：Uber Summary Dashboard的每小时视图使用AresDB查看特定时间段内的实时数据分析。*
+*<center>图14：Uber Summary Dashboard的每小时视图使用AresDB查看特定时间段内的实时数据分析。</center>*
 
 为了构建上面的模型仪表板，我们对以下表进行了建模：
 
 ### Trips（事实表）
+
 | trip_id | request_at | city_id | status | driver_id | fare |
 | --- | --- | --- | --- | --- | --- |
 | 1 | 1542058870 |	1 |	completed |	2 |	8.5 |
@@ -306,6 +311,7 @@ AresDB还管理多个GPU设备并将设备资源建模为GPU线程和设备内�
 | ... | | | | | |
 
 ### Cities （维度表）
+
 | city_id | city_name | timezone | 
 | --- | --- | --- |
 | 1	| San Francisco	| America/Los_Angeles |
@@ -314,9 +320,11 @@ AresDB还管理多个GPU设备并将设备资源建模为GPU线程和设备内�
 
 ### AresDB中的表结构
 要创建上述两个建模表，我们首先需要在AresDB中创建在以下结构的表：
-| Trips |	Cities |
-| --- | --- |
-| ```{
+
+<table>
+  <tr><td>Trips</td><td>Cities</td></tr>
+  <tr><td>
+  <pre><code>{
  “name”: “trips”,
  “columns”: [
    {
@@ -355,7 +363,8 @@ AresDB还管理多个GPU设备并将设备资源建模为GPU线程和设备内�
   “recordRetentionInDays”: 30
  },
  “archivingSortColumns”: [2,3]
-}``` | ``` {
+}</pre></code> </td> 
+    <td> <pre><code> {
  “name”: “cities”,
  “columns”: [
  {
@@ -378,7 +387,9 @@ AresDB还管理多个GPU设备并将设备资源建模为GPU线程和设备内�
  “config”: {
    “batchSize”: 2097152
  }
-}``` |
+}</pre></code></td>
+</tr>
+</table>
 
 如模式中所述，trips表被创建为事实表，表示实时发生的行程事件，而cities表被创建为维度表，存储有关实际城市的信息。
 
