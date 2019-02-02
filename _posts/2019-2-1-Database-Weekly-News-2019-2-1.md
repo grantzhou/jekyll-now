@@ -10,13 +10,13 @@ title: 数据库每周新闻 2019-2-1
 
 ![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/vhdp5hvij9fid43z4pjh.jpg)
 
-## [AresDB介绍：Uber的GPU驱动开源，实时分析引擎](https://eng.uber.com/aresdb/)
-Uber,一种共享乘车服务，具有巨大的数据驱动力，它们构建了一个重要的系统，可以使用GPU实现对于大规模并行系统的实时分析。 这是一篇很棒的文章来介绍这个系统是如何工作的,[源代码](https://github.com/uber/aresdb)
+## [AresDB介绍：Uber的开源GPU驱动实时分析引擎](https://eng.uber.com/aresdb/)
+Uber,一种共享乘车服务，具有巨大的数据驱动力，它们构建了一个重要的系统，使用GPU对大规模并行系统进行实时分析。 这是一篇很棒的文章来介绍这个系统是如何工作的。[这里是源代码](https://github.com/uber/aresdb)
 
 `UBER ENGINEERING`
 
 ## [无服务器时代的NoSQL：Google的Cloud Firestore现已普及](https://cloud.google.com/blog/products/databases/announcing-cloud-firestore-general-availability-and-updates)
-Cloud Firestore数据库是用于移动和Web应用程序开发的NoSQL，无服务器解决方案，现在可在全球范围内使用。
+Cloud Firestore数据库是用于移动和Web应用程序开发的NoSQL无服务器解决方案，现在已经在全球范围内正式发布。
 
 `GOOGLE CLOUD`
 
@@ -26,7 +26,7 @@ Cloud Firestore数据库是用于移动和Web应用程序开发的NoSQL，无服
 
 `STRONGDM` **赞助商**
 
-## [TimescaleDB 1.2：PostgreSQL的时间序列数据扩展](https://blog.timescale.com/timescaledb-1-2-analytical-functions-advanced-data-lifecycle-management-improved-performance/)
+## [TimescaleDB 1.2：一个PostgreSQL的时间序列数据扩展插件](https://blog.timescale.com/timescaledb-1-2-analytical-functions-advanced-data-lifecycle-management-improved-performance/)
 对于TimescaleDB来说这是重要的一周，因为不仅他们的开源和社区版本得到了一些关键的增强功能（例如：支持Postgres 11，[新的时间序列分析功能](https://blog.timescale.com/sql-functions-for-time-series-analysis/)），而且他们已[筹集了1500万美元](https://blog.timescale.com/raises-another-15m-for-leading-time-series-sql-database-introduces-enterprise-offering/)并推出了一个企业级产品。
 
 `TIMESCALE`
@@ -47,7 +47,7 @@ Cloud Firestore数据库是用于移动和Web应用程序开发的NoSQL，无服
 `MATTHIEU GAVAUDAN`
 
 ## [将Postgres扩展到每月12亿条记录的经验](https://medium.com/@gajus/lessons-learned-scaling-postgresql-database-to-1-2bn-records-month-edc5449b3067)
-本文分享了工程师们建立电影跟踪服务的经验，每天覆盖3200个电影院和47,000个放映时间。 本文涵盖了他们如何审核提供者，物化视图体验以及将数据库用作job队列。
+本文分享了工程师们建立电影跟踪服务的经验，每天覆盖3200个电影院和47,000个放映时间。 本文涵盖了他们如何审核提供者，物化视图的经验以及将数据库用作job队列。
 
 `GAJUS KUIZINAS`
 
@@ -63,7 +63,7 @@ Cloud Firestore数据库是用于移动和Web应用程序开发的NoSQL，无服
 ## [InfluxDays：唯一关注时间序列数据的活动](https://influxdays.com/new-york-2019/)
 3月13日参加InfluxDays NYC并了解为什么TSDB是增长最快的数据库细分市场。 20％折扣码：INFLUXDATANEWS。
 
-`INFLUXDATA` **赞助商**
+`INFLUXDATA` *赞助商*
 
 ## [TrailDB：有效地存储和查询一系列事件](http://traildb.io/)
 一个库（用C实现，但带有R，Go，Python和其他的绑定），用于以“超快”的速度查询一系列事件。
@@ -75,6 +75,6 @@ Cloud Firestore数据库是用于移动和Web应用程序开发的NoSQL，无服
 
 `ERIC FENG`
 
-# 🐦在Twitter上发现
+# 🐦Twitter点滴
 
 ![img_twitter](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/hkahffambllbnuuf71nh.jpg)
