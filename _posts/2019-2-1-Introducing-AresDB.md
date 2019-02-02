@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AresDB介绍：优步的开源GPU驱动实时分析引擎
+title: AresDB介绍：Uber基于GPU的开源实时分析引擎
 ---
 
 By Jian Shen, Ze Wang, David Wang, Jeremy Shi, and Steven Chen
@@ -201,7 +201,7 @@ AresDB还通过事实表将成熟，排序和压缩的列式数据（存档向�
    “from”: “2 days ago”
  }
 }
-
+```
 
 
 在JSON格式中，AQL为仪表板和决策系统开发人员提供了比SQL更好的编程查询体验，因为它允许他们使用代码轻松编写和操作查询，而无需担心SQL注入等问题。 它作为Web浏览器，前端服务器和后端服务器的典型架构的通用查询格式，一直回到数据库（AresDB）。 此外，AQL提供方便的语法糖，用于时间过滤和bucketization，具有本机时区支持。 该语言还支持隐式子查询等功能，以避免常见的查询错误，并使后端开发人员可以轻松进行查询分析和重写。
