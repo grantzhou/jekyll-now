@@ -32,7 +32,8 @@ table {
   width: 100%;
 }
 
-th, td {
+table, th, td {
+  border: 1px solid black;
   text-align: left;
   padding: 8px;
 }
