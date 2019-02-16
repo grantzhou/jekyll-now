@@ -10,8 +10,8 @@ title: 数据库每周新闻 2019-2-15
 
 ![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/kixpgozyckjykvko0brd.jpg)
 
-## [为什么谷歌需要图形服务系统(Graph Serving System)](https://dbweekly.com/link/59435/web)
-图数据库公司[ Dgraph Labs](https://dbweekly.com/link/59436/web)的创始人介绍了他之前在谷歌的工作并解释了谷歌将如何使用图形技术来改进他们的搜索系统。
+## [为什么谷歌需要图服务系统(Graph Serving System)](https://dbweekly.com/link/59435/web)
+图数据库公司[ Dgraph Labs](https://dbweekly.com/link/59436/web)的创始人介绍了他之前在谷歌的工作并解释了谷歌将如何使用图技术来改进他们的搜索系统。
 
 `MANISH RAI JAIN (DGRAPH LABS)`
 
@@ -33,11 +33,11 @@ Citus Data公司的Craig Kerstiens解释了为什么，在他职业生涯中所�
 `PAVEL TIUNOV`
 
 ## [遵循即将出台的加利福尼亚州数据法的数据检测工具出现](https://dbweekly.com/link/59440/web) 
-加利福尼亚州消费者隐私法案（CCPA），本质上当于欧洲的GDPR，于2020年1月1日生效。鉴于加利福尼亚州的科技公司和数据库提供商的强大存在，提供相应工具用以检测数据是否遵守现代隐私法是必须的。
+加利福尼亚州消费者隐私法案（CCPA），本质上相当于欧洲的GDPR，将于2020年1月1日生效。鉴于加利福尼亚州的科技公司和数据库提供商的强大存在，提供相应工具用以检测数据是否遵守现代隐私法是必须的。
 
 `DATANAMI`
 
-## [PostgreSQL 11重塑其在window function方面的领导力](https://dbweekly.com/link/59442/web)
+## [PostgreSQL 11重塑其在窗口函数功能（window function）方面的领导力](https://dbweekly.com/link/59442/web)
 PostgreSQL 11相对于其竞争者，提供了最佳的OVER子句支持，也提供了真正的procedures ，并对FETCH FIRST 做了改进，同时支持XML。
 
 `MARKUS WINAND`
@@ -52,9 +52,7 @@ MySQL 8.0具有很多大的改进，如果你是重度Mysql用户，你会发现
 
 `ARJUN NARAYAN AND PETER MATTIS (COCKROACH LABS)`
 
-## [如何计算SQL中的 Cumulative Percentage](https://dbweekly.com/link/59447/web)
-
-
+## [如何计算SQL中的累积百分比](https://dbweekly.com/link/59447/web)
 
 `LUKAS EDER`
 
