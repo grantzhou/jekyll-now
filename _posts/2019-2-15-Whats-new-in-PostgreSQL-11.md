@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What’s new in PostgreSQL 11
+title:  PostgreSQL 11中的新功能
 ---
 
 [原文链接】（https://modern-sql.com/blog/2019-02/postgresql-11#footnote-0）
@@ -14,7 +14,7 @@ PostgreSQL 11在四个月前就发布，我的评论本应早就发出。 让我
 [有些甚至超过了PostgreSQL](https://modern-sql.com/blog/2018-04/mysql-8.0#window-functions)。
 PostgreSQL社区已经做好准备，[PostgreSQL 11于2018年刚刚发布](https://www.postgresql.org/about/news/1894/)，它已经恢复甚至扩大了其领导地位。<sup>[0](#myfootnote0)</sup>
 
-本文解释了这个竞赛，并介绍了PostgreSQL 11中的其他改进。
+本文解释了这方面的竞争，并介绍了PostgreSQL 11中的其他改进。
 
 内容包括:
 
@@ -43,12 +43,14 @@ PostgreSQL 11不支持的唯一over子句是**pattern**和相关子句。 这些
 
 该例子计算列amnt上的运行总计，因此根据指定的**order by**子句计算当前行之前和之前所有行的总和：
 
-> SELECT SUM(amnt)
->       OVER(ORDER BY id
->            **ROWS BETWEEN UNBOUNDED PRECEDING**
->                    **AND CURRENT ROW**
->           ) running_total
->  FROM …
+```
+SELECT SUM(amnt)
+       OVER(ORDER BY id
+            **ROWS BETWEEN UNBOUNDED PRECEDING**
+                    **AND CURRENT ROW**
+           ) running_total
+  FROM …
+```
 
 聚合函数**sum**与**over**子句一起使用，而不是与group by子句一起使用 - 这使它成为一个窗口函数。 这个例子中有趣的部分是框架(framing)，以**粗体**显示。
 
