@@ -3,7 +3,7 @@ layout: post
 title:  PostgreSQL 11中的新功能
 ---
 
-[原文链接]（https://modern-sql.com/blog/2019-02/postgresql-11#footnote-0）
+[原文链接]https://modern-sql.com/blog/2019-02/postgresql-11#footnote-0）
 
 ## PostgreSQL 11中的新功能
 PostgreSQL 11在四个月前就发布，我的评论本应早就发出。 让我们现在开始！
@@ -36,7 +36,8 @@ over子句定义哪些行对窗口函数可见。 窗口函数最初使用SQL：
 
 2017年，MariaDB推出了窗口功能。 MySQL和SQLite紧随其后在2018年也推出此功能。那时，over子句的MySQL实现甚至比PostgreSQL更完整，这是PostgreSQL 11关闭的一个空白。 此外，PostgreSQL再次支持over子句的某些方面，即<sup>[帧单元组](#framunitgroups)</sup>(Frame Unit **groups**)和<sup>[帧排除](#framexclusion)</sup>(frame exclusion)。 任何其他主要的SQL数据库都不支持这些 - 无论是开源还是商业。
 
-PostgreSQL 11不支持的唯一over子句是**pattern**和相关子句。 这些子句属于 SQL:2016 标准，并基于正则表达式进行框架化。 目前没有主流数据库支持这种框架
+PostgreSQL 11不支持的唯一over子句是**pattern**和相关子句。 这些子句属于 SQL:2016 标准，并基于正则表达式进行框架化。 
+目前没有主流数据库支持这种框架。<a name="myfootnote1">1</a>
 
 ### <a name="framunitgroups"> 帧单元组(Frame Unit **groups**) </a>
 在研究PostgreSQL 11中的新功能之前，我将向您展示一个典型的窗口函数用例。 然后我们可以进行所谓的框架（*framing*）。
@@ -77,8 +78,26 @@ SELECT SUM(amnt)
   
 ![_config.yml]({{ site.baseurl }}/images/pgn1.png)
 
+下一个帧单位,**range**,根本不计算行数。 相反，它使用排序键的值（按表达式排序）并添加或减去指定的<distance>。 排序键的值落入指定范围的所有行都将被带入帧中。
+
+请注意，当前行(**current row)作为范围(**range**)绑定是指与当前行具有相同值的所有行。 那可以是很多行。 将当前行视为前面的0或后面的0 <sup>[2](#myfootnote2)</sup>。如果是范围，“当前对等”或“当前值”可能是比当前行更好的选择。
+
+下图使用单位范围而不是行。 由于当前行的值为2，因此框架将覆盖值为1到2（包括）的所有行。 帧从第一行开始，因为它的值是1，因此落入值范围。 帧的结尾甚至超出当前行，因为下一行仍然落在值范围内。
+
 ![_config.yml]({{ site.baseurl }}/images/pgn2.png)
+
+这是一个适用于MySQL 8.0的示例，但不适用于版本11之前的PostgreSQL。虽然PostgreSQL之前支持范围帧，但您无法使用如上所示的数字距离。 在PostgreSQL 11之前只能使用无界和当前行。顺便说一句，SQL Server和SQLite仍然如此。 PostgreSQL 11支持具有所有边界类型的所有帧单元。
+
+`代表我自己`
+`我靠培训，其他SQL相关服务和销售我的书来谋生。 通过 https://winand.at/ 了解更多信息。`
+
+PostgreSQL 11完全支持最后一个帧 - **groups**。组将结果或分区的每一行分配到一个组中，就像group by子句一样。 然后，<distance>指的是当前行之前和之后要覆盖的组的数量，即不同的排序键值的数量。
+
+下图显示了组帧如何在当前值（前一个）和当前值本身（当前行）之前覆盖一个不同的值。 值之间的数字差异无关紧要，行数也不重要。 组仅仅是关于不同值的数量。
 ![_config.yml]({{ site.baseurl }}/images/pgn3.png)
+
+PostgreSQL 11是第一个支持组帧的主要SQL数据库。
+
 ![_config.yml]({{ site.baseurl }}/images/pgn4.png)
 ![_config.yml]({{ site.baseurl }}/images/pgn5.png)
 ![_config.yml]({{ site.baseurl }}/images/pgn6.png)
@@ -124,5 +143,11 @@ Markus为在任何规模的公司工作的开发人员提供SQL培训和咨询�
 ## 脚注
 <a name="myfootnote0">0</a>: PostgreSQL现在已经成为over子句的领导者。
 在考虑支持的窗口函数时，由于PostgreSQL缺乏支持窗口函数中的*respect|ignore nulls*子句，因此可能与Oracle数据库排名类似。
-在考虑运行时行为时，Oracle数据库可能会获胜，因为它可以根据单调推进窗口函数的结果正确应用Top-N优化（与PostgreSQL不同）。
+在考虑运行时行为时，Oracle数据库可能会获胜，因为它可以根据单调推进窗口函数的结果正确应用Top-N优化（与PostgreSQL不同）。.
 
+<a name="myfootnote1">1</a>: Oracle Database 12c支持与from中的match_rocognize子句匹配行模式，但不支持**over**。
+
+<a name="myfootnote2">2</a>: SQL：2016-2：§7.15GR5bi3EII 甚至明确提到了关于**groups**这一点
+
+
+<a name="myfootnote2">3</a>: 我认为这是一个专有扩展。 SQL：2016-2：§4.33.2“SQL调用例程的特性”第一段将SQL例程（过程和函数）的事务控制语句限制为与保存点相关的语句。
