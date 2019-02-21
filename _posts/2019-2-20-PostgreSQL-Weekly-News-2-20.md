@@ -88,13 +88,13 @@ Postgres使用各种类型的缓存来保持平稳运行，但我们将专注于
 
 我们可以将所有这些数据整合到一个更易读的格式中，并使用如下查询：
 
-`WITH y AS (`
-  `SELECT`
-  `sum(heap_blks_read) AS read,`
-  `sum(heap_blks_hit) AS hit`
-  `FROM pg_statio_user_tables`
- `) SELECT read, hit, hit / (hit+read)`
-   `AS ratio FROM y;`
+`WITH y AS (`  
+  `SELECT`  
+  `sum(heap_blks_read) AS read,`  
+  `sum(heap_blks_hit) AS hit`  
+  `FROM pg_statio_user_tables`  
+ `) SELECT read, hit, hit / (hit+read)`  
+   `AS ratio FROM y;`  
 
 在我的数据库中，我得到了如下结果：
 ![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/wlanefrlhzlcikqtvtdd.jpg)
