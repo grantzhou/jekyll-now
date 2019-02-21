@@ -39,11 +39,11 @@ DigitalOcean加入其他提供商之列，如AWS，Google，MS Azure和Heroku，
 `DIGITALOCEAN`
 
 ## [你需要多少maintenance_work_mem？](https://rhaas.blogspot.com/2019/01/how-much-maintenanceworkmem-do-i-need.html)
-work_mem是数据库的关键配置，但要需要多少可能会让您感到困惑。Postgres的提交者Robert Hass强调了这个问题并试图解释原因。
+work_mem是数据库的关键配置，但如何配置可能会让您感到困惑。Postgres的提交者Robert Hass强调了这个问题并试图解释原因。
 
 `ROBERT HAAS`
 
-## [使用Barman的地理冗余的Postgres备份](https://blog.2ndquadrant.com/geo-redundancy-postgresql-database-backups-barman/)
+## [使用Barman的Postgres地理冗余备份](https://blog.2ndquadrant.com/geo-redundancy-postgresql-database-backups-barman/)
 [Barman 2.6](https://www.pgbarman.org/barman-2-6-released/)引入了对地理冗余的支持，这意味着Barman现在可以从另一个Barman实例复制，而不仅仅是Postgres数据库。
 
 `GABRIELE BARTOLINI`
@@ -54,11 +54,11 @@ work_mem是数据库的关键配置，但要需要多少可能会让您感到困
 `SEVERALNINES` **赞助商**
 
 ## [用Postgres Goggles On查看MySQL 8](https://www.cybertec-postgresql.com/en/looking-at-mysql-8-with-postgresql-goggles-on/)
-如果你是一个深度的Postgres用户，你可能多年没有了解过MySQL了。但是，如果你很好奇现在的MySQL是什么样的，Kaarel已经帮你了解了，甚至找到了在Postgres中受欢迎的一些功能。
+如果你是一个深度的Postgres用户，你可能多年没有使用过MySQL了。但是，如果你很好奇现在的MySQL是什么样的，Kaarel已经帮你了解了，甚至找到了在Postgres中受欢迎的一些功能。
 
 `KAAREL MOPPEL`
 
-## [如何计算SQL中的累积百分比] (https://blog.jooq.org/2019/02/14/how-to-calculate-a-cumulative-percentage-in-sql/)
+## [如何计算SQL中的累积百分比](https://blog.jooq.org/2019/02/14/how-to-calculate-a-cumulative-percentage-in-sql/)
 
 `LUKAS EDER`
 
