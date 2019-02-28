@@ -35,7 +35,7 @@ Timescale的Andrew Staller指出Postgres继续被称为“增长最快的DBMS”
 
 `ANDREW STALLER (TIMESCALE)`
 
-## [PostgreSQL fsync修复失败（为什么！）](https://www.percona.com/blog/2019/02/22/postgresql-fsync-failure-fixed-minor-versions-released-feb-14-2019/)
+## [PostgreSQL fsync失败问题修复了（为什么！）](https://www.percona.com/blog/2019/02/22/postgresql-fsync-failure-fixed-minor-versions-released-feb-14-2019/)
 Postgres最近修复了使用fsync的长期问题。这篇文章解释了问题所在。
 
 `AVINASH VALLARAPU`
@@ -45,13 +45,13 @@ Postgres最近修复了使用fsync的长期问题。这篇文章解释了问题�
 
 `KAMAL NASSER`
 
-## [电子书：Best Practices for Optimizing Postgres Query Performance](https://pganalyze.com/ebooks/optimizing-postgres-query-performance?utm_source=PostgresWeeklySecondary)
+## [电子书：优化Postgres查询性能的最佳实践](https://pganalyze.com/ebooks/optimizing-postgres-query-performance?utm_source=PostgresWeeklySecondary)
 在这本免费的pganalyze的电子书中，可以了解如何在Postgres数据库上获得3倍的性能提升，并且磁盘加载的数据减少500倍。
 
 `PGANALYZE` **赞助商**
 
 ## [我们如何使用延迟复制进行Postgres灾难恢复](https://about.gitlab.com/2019/02/13/delayed-replication-for-disaster-recovery-with-postgresql/)
-复制不是备份。或者复制是备份？下面介绍延迟复制以及GitLab如何使用它来从意外的标签删除中恢复。
+复制不是备份。或者复制是备份？下面介绍延迟复制以及GitLab如何用它来恢复意外的标签删除。
 
 `ANDREAS BRANDL`
 
@@ -93,6 +93,6 @@ Postgres最近修复了使用fsync的长期问题。这篇文章解释了问题�
 
 在这里，我们可以看到一个表占用的空间总量（如果包括存储在表本身和附加的TOAST表中的数据）以及每个表的索引。
 
-如果要查看每一个有问题的索引，而不是将表的所有索引捆绑成一个，那么可以使用稍微复杂的查询。
+如果要查看每一个有问题的索引，而不是将表的所有索引捆绑成一个，这里有一个[稍微复杂的查询](https://gist.github.com/peterc/05fca349f6f0ad683941e36e82a97b9e)可供使用。
 
 > 本周的技巧由[strongDM](https://www.strongdm.com/)赞助，这是保护您访问服务器/数据库的最佳方式。 [安排10分钟的演示](https://www.strongdm.com/)
