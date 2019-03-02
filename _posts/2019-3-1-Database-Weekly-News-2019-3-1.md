@@ -87,6 +87,4 @@ MySQL 8.0具有很多大的改进，如果你是重度Mysql用户，你会发现
 
 一个用以构建app的运行环境，集合一个框架、SDKs 和 客户端，便可以构建流数据可视化，并将其嵌入到现有的app里。
 
-`DBEAVER TEAM`
-
-`DBEAVER TEAM`
+`DATANAMI`
