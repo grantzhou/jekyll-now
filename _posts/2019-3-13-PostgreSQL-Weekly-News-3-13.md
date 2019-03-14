@@ -3,7 +3,7 @@ layout: post
 title: PostgreSQL 每周新闻 2019-03-13
 ---
 
-### PostgreSQL每周新闻#295 - 2019年3月13日
+### PostgreSQL每周新闻#296 - 2019年3月13日
 ![_config.yml]({{ site.baseurl }}/images/PostgresWeekly.png)  
 
 
