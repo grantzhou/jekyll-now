@@ -22,7 +22,7 @@ Postgres的psql命令行客户端非常棒，但有些人更喜欢图形工具�
 `2NDQUADRANT POSTGRESQL PRODUCTS` **赞助商**
 
 ## [垂直扩展PostgreSQL](https://pgdash.io/blog/scaling-postgres.html)
-Postgres非常容易使用额外的资源（CPU，内存，磁盘等），但并非都是自动的，有时可以进行调整。 当然，如果你想为Postgres进行一些水平缩放，请查看[Citus](https://github.com/citusdata/citus)。
+Postgres非常容易使用额外的资源（CPU，内存，磁盘等），但并非都是自动的，有时可以进行调整。 当然，如果你想为Postgres进行一些水平扩展，请查看[Citus](https://github.com/citusdata/citus)。
 
 `RAPIDLOOP`
 
@@ -31,7 +31,7 @@ Postgres非常容易使用额外的资源（CPU，内存，磁盘等），但并
 
 `JULIEN FRANCOZ`
 
-## [外部数据包装性能调优](https://www.cybertec-postgresql.com/en/foreign-data-wrapper-for-postgresql-performance-tuning/)
+## [外部数据封装器（FDW）性能调优](https://www.cybertec-postgresql.com/en/foreign-data-wrapper-for-postgresql-performance-tuning/)
 postgres_fdw有一些隐藏的调优选项，但是大部分用户并不知道。
 
 `HANS-JÜRGEN SCHÖNIG`
@@ -46,8 +46,8 @@ postgres_fdw有一些隐藏的调优选项，但是大部分用户并不知道�
 
 `SEVERALNINES` **赞助商**
 
-## [SQL的乐趣：文本和系统功能](https://www.citusdata.com/blog/2019/03/13/fun-with-sql-text-functions/)
-文章主要介绍了Postgres的位置功能以及其他一些有用的相关功能。
+## [SQL的乐趣：文本和系统函数](https://www.citusdata.com/blog/2019/03/13/fun-with-sql-text-functions/)
+文章主要介绍了Postgres的position函数以及其他一些有用的相关函数。
 
 `CRAIG KERSTIENS`
 
@@ -60,13 +60,13 @@ postgres_fdw有一些隐藏的调优选项，但是大部分用户并不知道�
 由Citus Data提供支持
 
 ## 在psql中使用\watch 
-(这真的是“要么你知道它，要么你不知道”的提示之一！)
+(这真的是“会就是会，不会就是不会”的提示之一！)
 
-Postgres的psql客户端附带了许多[元命令](https://www.postgresql.org/docs/10/app-psql.html#APP-PSQL-META-COMMANDS)，可以帮助您导航数据库并执行各种管理功能。一个特别有趣的命令是\watch。
+Postgres的psql客户端附带了许多[元命令](https://www.postgresql.org/docs/10/app-psql.html#APP-PSQL-META-COMMANDS)，可以帮助您浏览数据库并执行各种管理功能。一个特别有趣的命令是\watch。
 
-最简单的是，\watch每2秒运行一次最新运行的查询（来自psql的查询缓冲区)。如果你指定一个参数，在几秒钟内，它将每隔X秒运行一次查询：比如， \watch 1指每秒运行一次。 使用CTRL + C可以跳出循环。
+最简单的是，\watch每2秒运行一次最新运行的查询（来自psql的查询缓冲区)。如果你指定一个单位为秒的参数，那么它将每隔 X 秒运行一次查询：比如， \watch 1指每秒运行一次。 使用CTRL + C可以跳出循环。
 
-一个有用的地方是，如果你总是想看到你的应用最后添加的用户。例如：
+假如你总是想看到你的应用最后添加的用户，那这个命令应该很有用。例如：
 
 `SELECT * FROM users ORDER BY created_at DESC LIMIT 1; \watch 30`  
 
