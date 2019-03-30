@@ -21,7 +21,9 @@ Aurora是一个MySQL和PostgreSQL兼容的数据库，它使用了许多优化�
 `JUSTIN ETHEREDGE`
 
 ## [为什么要在你的物联网应用程序中使用关系数据库](https://blog.timescale.com/use-relational-database-instead-of-nosql-for-iot-application/?utm_campaign=db-weekly-sponsor&utm_source=db-weekly-newsletter-mar&utm_medium=referral&utm_content=blog-post-relational)
+
 ![img](https://copm.s3.amazonaws.com/17a6b19d.jpg)
+
 不要错误地创建数据孤岛。 使用像TimescaleDB这样的关系数据库，您可以在一个从云到边缘扩展的单个数据库系统中统一时间序列，元数据和地理空间数据。
 这就是为什么[Azure与Timescale合作](https://blog.timescale.com/timescale-microsoft-azure-team-up-to-power-iot-and-time-series-workloads/?utm_campaign=db-weekly-sponsor&utm_source=db-weekly-newsletter-mar&utm_medium=referral&utm_content=blog-post-azure)为物联网和时间序列工作负载提供支持的原因。
 
