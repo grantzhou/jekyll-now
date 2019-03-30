@@ -5,7 +5,7 @@ title: 数据库每周新闻 2019-3-29
 
 ## 数据库每周新闻 #247 - 2019年3月29日
 ![config.yml]({{ site.baseurl }}/images/DBWeekly.png)
-备注：[英文原文地址](https://dbweekly.com/issues/245)
+备注：[英文原文地址](https://dbweekly.com/issues/247)
 ![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/ujrnhvi0iljfsxwgwgcm.jpg)
 
 ## [深入研究Amazon Aurora的设计](https://blog.acolyer.org/2019/03/25/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases/)
