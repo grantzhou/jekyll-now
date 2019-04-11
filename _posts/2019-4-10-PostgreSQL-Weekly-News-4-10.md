@@ -8,15 +8,15 @@ title: PostgreSQL 每周新闻 2019-04-10
 
 备注：[英文原文地址](https://postgresweekly.com/issues/300)
 
-! [pg_img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/x9ttl8oxzxvbn0mhiw6v.jpg)
+![pg_img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/x9ttl8oxzxvbn0mhiw6v.jpg)
 
 ## [如何提高COUNT(*)的性能](https://www.cybertec-postgresql.com/en/count-made-fast/)
-在Postgres中使用count（*）通常很慢。 本文探讨了使用近似和其他的技巧,使行计数更快的方法。
+在Postgres中使用count（*）通常很慢。 本文探讨了使用近似和其他的技巧,让计算行数更快的方法。
 
 `LAURENZ ALBE`
 
 ## [当漏洞不是漏洞时](https://blog.hagander.net/when-a-vulnerability-is-not-a-vulnerability-244/)
-有时一些功能会成为为记录而记录的“漏洞”，例如[CVE-2019-9193](https://nvd.nist.gov/vuln/detail/CVE-2019-9193)和Postgres的COPY TO / FROM PROGRAM功能。如果您在管理Postgres系统，那么在您的部署中值得了解一些滥用潜力的情况。
+有时一些功能会被标记为记录“漏洞”，例如[CVE-2019-9193](https://nvd.nist.gov/vuln/detail/CVE-2019-9193)和Postgres的COPY TO/FROM PROGRAM功能。如果您在管理Postgres系统，那么在您的部署中值得了解一些潜在的滥用情况。
 
 `MAGNUS HAGANDER`
 
@@ -68,29 +68,26 @@ vipsql2.0版本在几周前问世。
 `MARTIN GAMMELSÆTER`
 
 # ![_config.yml]({{ site.baseurl }}/images/Tips-icon.png)   本周提示
-由Git Prime提供支持
+由GitPrime提供支持
 
 选择表格行的“样本”
 
 您有一个充满数据的表，您想要选择该数据的随机样本。使用带有RANDOM()指令的SELECT是一种方法，但可能会对大型数据集产生性能问题。 谢天谢地，有一个更好的方法。  
 首先，让我们创建一个包含1000行的表 - 数字1到1000：
 
-```
-CREATE TABLE numbers (number int);
-INSERT INTO numbers (number)
-  SELECT id FROM generate_series(1,1000) AS id;
-```
+`CREATE TABLE numbers (number int);`
+`INSERT INTO numbers (number)`
+`  SELECT id FROM generate_series(1,1000) AS id;`
+
 Postgres 9.5引入了一个新的TABLESAMPLE子句，允许您以不同的方式对表进行采样（默认情况下有2种方式，但可以通过扩展添加更多方式）。让我们从表中检索随机的0.5％的行：
 
-```
-SELECT * FROM numbers TABLESAMPLE BERNOULLI (0.5);
- number 
---------
-    101
-    213
-    278
-    433
-```
+`SELECT * FROM numbers TABLESAMPLE BERNOULLI (0.5);`
+` number `
+`--------`
+`    101`
+`    213`
+`    278`
+`    433`
 
 BERNOULLI从表中选择行的概率为0.5％（统计上我们平均得到5行），但是还有一种更有效的SYSTEM方法，它使用基于块的技术（返回表中的范围/行组时可能有一些缺点）。
 您还可以将TABLESAMPLE与其他SQL语句（如UPDATE或DELETE）一起使用，例如，无论出于何种原因，如果您想删除表的30％的行。
