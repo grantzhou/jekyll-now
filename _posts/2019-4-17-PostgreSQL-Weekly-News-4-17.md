@@ -9,7 +9,7 @@ title: PostgreSQL 每周新闻 2019-04-17
 备注：[英文原文地址](https://postgresweekly.com/issues/301)
 
 ## ['Postgres现在有可插拔的表存储'](https://twitter.com/AndresFreundTec/status/1113948321976946689)
-好吧，核心确实如此，我们需要等待一段时间才能在生产中使用它，但能够更轻松地切换到表存储系统将会带来有趣的机会。
+好吧，内核已经支持了，可是我们需要等待一段时间才能在产品中使用这个功能。能够更轻松地切换到表存储系统将会带来有趣的机会。
 
 `ANDRES FREUND ON TWITTER`
 
@@ -35,7 +35,7 @@ title: PostgreSQL 每周新闻 2019-04-17
 `JOHN NAYLOR`
 
 ## [Swarm64支持Xilinx Alveo加速器](https://swarm64.com/press-release/swarm64-supports-xilinx-alveo/)
-冒着听起来像一堆流行语和商标的风险，这是一篇关于[基于FPGA的数据库加速器](https://swarm64.com/productsolution/)支持Postgres的新闻稿。
+有点做广告的嫌疑，这是一篇关于[基于FPGA的数据库加速器](https://swarm64.com/productsolution/)支持Postgres的新闻稿。
 
 `SWARM64`
 
@@ -59,12 +59,12 @@ title: PostgreSQL 每周新闻 2019-04-17
 
 `PAVEL STEHULE`
 
-## [Marten：基于Postgres的.NET系统持久性](http://jasperfx.github.io/marten/)
+## [Marten：支持.NET系统的基于Postgres的持久层](http://jasperfx.github.io/marten/)
 基于.NET的应用程序的文档数据库和事件存储，它使用Postgres在后端执行繁重的工作。 并且，是的，它适用于.NET Core :-)
 
 `JASPERFX`
 
-## [libpqxx：Postgres官方C ++客户端API](https://github.com/jtv/libpqxx)
+## [libpqxx：官方C++ Postgres客户端API](https://github.com/jtv/libpqxx)
 libpqxx最近有很多更新。
 
 `JEROEN VERMEULEN`
@@ -80,19 +80,15 @@ libpqxx最近有很多更新。
 
 在你的主postgresql.conf文件（通常是/etc/postgresql/9.6/main/postgresql.conf）中，编辑或添加一行如下：
 
-```
-log_min_duration_statement = 1000
-```
+`log_min_duration_statement = 1000`
 
-重新启动Postgres或使用SELECT pg_reload_conf（）重新加载配置后，此指令将记录超过1000毫秒（一秒）的任何查询。
+重新启动Postgres或使用`SELECT pg_reload_conf（）`重新加载配置后，此指令将记录超过1000毫秒（一秒）的任何查询。
 
 （日志文件的位置不同，但在我的测试设置中的是/var/log/postgresql/postgresql-9.6-main.log。）
 
-故意为测试目的运行长查询：
+为测试目的特意运行长查询：
 
-```
-select pg_sleep(10) /* just testing */;
-```
+`select pg_sleep(10) /* just testing */;`
 
 请注意查询中是否存在注释，该注释也会出现在日志中，以便其他监控人员了解正在发生的事情。
 
