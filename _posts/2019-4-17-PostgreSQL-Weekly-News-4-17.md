@@ -14,7 +14,7 @@ title: PostgreSQL 每周新闻 2019-04-17
 `ANDRES FREUND ON TWITTER`
 
 ## [用C语言编写PostgreSQL扩展很有趣](https://www.percona.com/blog/2019/04/05/writing-postgresql-extensions-is-fun-c-language/)
-这取决于你对乐趣的定义，但它并不像我想象的那么困难。这篇文章介绍了入门的基本步骤。如果您希望继续这样做，我认为阅读简单但完整的扩展代码，例如[count_distinct](https://github.com/tvondra/count_distinct/blob/master/src/count_distinct.c)，是非常有用的。的
+这取决于你对乐趣的定义，但它并不像我想象的那么困难。这篇文章介绍了入门的基本步骤。如果您希望继续这样做，我认为阅读简单但完整的扩展代码，例如[count_distinct](https://github.com/tvondra/count_distinct/blob/master/src/count_distinct.c)，是非常有用的。
 
 `IBRAR AHMED`
 
