@@ -10,9 +10,9 @@ title: PostgreSQL 每周新闻 2019-04-24
 
 ![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/kkezxirgkdbs56ajblmu.jpg)
 
-## [使用SQL和Postgres生成分形](https://malisper.me/generating-fractals-with-postgres-escape-time-fractals/)
+## [使用SQL和Postgres生成图形](https://malisper.me/generating-fractals-with-postgres-escape-time-fractals/)
 
-在“!! Con West 2019”会议上，Michael[谈到了使用SQL创建分形](https://www.youtube.com/watch?v=xKoYIvMFnoQ)，这是书面版。这不仅是一个（非常详细的）有趣的演讲，而且你会学到一些关于SQL和Postgres的东西——强烈推荐！
+在“!! Con West 2019”会议上，Michael[谈到了使用SQL生成图形](https://www.youtube.com/watch?v=xKoYIvMFnoQ)，这是已经完成的版本。这不仅仅是一个（非常详细的）有趣的东西，你可以从中学到很多SQL和Postgres相关的知识——强烈推荐！
 
 `MICHAEL MALIS`
 
@@ -36,16 +36,16 @@ title: PostgreSQL 每周新闻 2019-04-24
 
 `RAGHAVENDRA TADIPATHRI`
 
-## [PostgreSQL 12新功能：记录事务样本中的所有语句](https://www.depesz.com/2019/04/18/waiting-for-postgresql-12-log-all-statements-from-a-sample-of-transactions/)
-快速浏览一下Postgres 12的一个新功能，它可以让你的语句日志文件受控，只在你想要的时候记录它们的样本。
+## [PostgreSQL 12新功能：对一个事务的所有的SQL进行取样记录](https://www.depesz.com/2019/04/18/waiting-for-postgresql-12-log-all-statements-from-a-sample-of-transactions/)
+快速浏览一下Postgres 12的一个新功能，它可以让你的日志文件中的sql语句受控，在你想要的时候对SQL语句进行取样记录。
 
 `HUBERT DEPESZ LUBACZEWSKI`
 
 # 🛠工具和代码
 
-## [pg_sampletolog：一个关于日志示例声明或事务的扩展](https://github.com/anayrat/pg_sampletolog)
+## [pg_sampletolog：一个取样记录sql语句和事务的插件](https://github.com/anayrat/pg_sampletolog)
 
-Postgres 12即将发布声明示例（前文提到），但此扩展适用于Postgres 9.4-11，以便您现在记录语句或事务的样本。
+Sql语句取样记录功能即将在pg12发布（前文提到）。这个扩展可以让你在pg9.4-pg11上使用sql语句和事务取样记录功能。
 
 `ADRIEN NAYRAT`
 
@@ -55,7 +55,7 @@ Postgres 12即将发布声明示例（前文提到），但此扩展适用于Pos
 `PAVEL STEHULE`
 
 ## [管理Postgres访问的最佳方式](https://www.strongdm.com/product/?utm_source=&utm_medium=email&utm_campaign=2019-04-24%20-%20%5BUSA%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20%5BENT%5D%20-%20PGW)
-strongDM适用于堆栈中的所有内容。认真的讲，任何数据库，任何服务器，每个环境。[看看它是怎么工作的](https://www.strongdm.com/product/?utm_source=&utm_medium=email&utm_campaign=2019-04-24%20-%20%5BUSA%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20%5BENT%5D%20-%20PGW)
+strongDM对你所接触的很多东西都有效。认真的讲，任何数据库，任何服务器，每个环境。[看看它是怎么工作的](https://www.strongdm.com/product/?utm_source=&utm_medium=email&utm_campaign=2019-04-24%20-%20%5BUSA%5D%20-%20%5BSchD%5D%20-%20%5BSDM%5D%20-%20%5BENT%5D%20-%20PGW)
 
 `STRONGDM` **赞助商**
 
@@ -64,8 +64,8 @@ strongDM适用于堆栈中的所有内容。认真的讲，任何数据库，任
 
 `JOSH WILLIAMS`
 
-## [deno-postgres：Deno的PostgreSQL驱动程序](https://github.com/bartlomieju/deno-postgres)
-[Deno](https://github.com/denoland/deno)是一个有趣且有实验性的JavaScript runtime，由Node.js的原始创建者构建（注意Deno是由Node字母重新排列而来的！）
+## [deno-postgres：PostgreSQL驱动Deno](https://github.com/bartlomieju/deno-postgres)
+[Deno](https://github.com/denoland/deno)是一个运行在JavaScript的上的postgres驱动，它有趣且具有实验性，由Node.js的原始创建者构建（注意Deno是由Node字母重新排列而来的！）
 
 `BARTEK IWAŃCZUK`
 
