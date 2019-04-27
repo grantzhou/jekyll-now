@@ -58,6 +58,15 @@ title: 对于容器中的数据库和Postgres需要知道的11件事
 今天，容器和容器编排已经成熟到现在它们已经定位于云原生计划的核心。
 数据库正成为容器化的热门候选者，成为向微服务和无服务器架构转变的一部分的按需使用程序。
 
+## 相关文章
+![img2](https://i0.wp.com/containerjournal.com/wp-content/uploads/2019/03/Container-Adoption-Increases.jpg?resize=350%2C200&ssl=1)
+[随着容器采用的增加，出现了新的存储挑战](https://containerjournal.com/2019/03/04/new-storage-challenges-emerge-as-container-adoption-increases-2/)
+2019年2月20日
+
+![img3](https://i0.wp.com/containerjournal.com/wp-content/uploads/2018/10/Containers-Best-Practices.jpg?resize=350%2C200&ssl=1)
+[9个容器最佳实践支柱](https://containerjournal.com/2018/10/16/9-pillars-of-containers-best-practices/)
+2018年10月16日
+
 ## 关于Aziz Rahman
 ![authorimg](https://bdlguu0syu1idj5d2b4m53mv-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Aziz-Rahman.jpg)
 
