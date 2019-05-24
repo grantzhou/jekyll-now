@@ -28,7 +28,7 @@ pg_cron是一个Postgres的扩展，他可以在一个正在运行的数据库�
 
 
 
-## [RUN索引](https://habr.com/en/company/postgrespro/blog/452116/)
+## [RUM索引](https://habr.com/en/company/postgrespro/blog/452116/)
 几周之前我们链接了一篇关于GIN索引的文章，还是这个作者，他现在又在深入的研究RUM。RUM本质上是gin索引的一种特殊扩展，但现在它不是POstgres的内置索引类型。
 `EGOR ROGOV`
 
