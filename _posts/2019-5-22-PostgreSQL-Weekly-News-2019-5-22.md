@@ -3,7 +3,7 @@ layout: post
 title: PostgreSQL 每周新闻 2019-5-22
 ---
 
-### PostgreSQL每周新闻#305 - 2019年5月15日
+### PostgreSQL每周新闻#306 - 2019年5月22日
 ![_config.yml]({{ site.baseurl }}/images/PostgresWeekly.png)
 
 备注：[英文原文地址](https://postgresweekly.com/issues/306)
