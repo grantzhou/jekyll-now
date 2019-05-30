@@ -36,8 +36,8 @@ title: PostgreSQL 每周新闻 2019-5-22
 
 `PAUL RAMSEY`
 
-## [使用Docker Hub的Postgres图片](https://www.2ndquadrant.com/en/blog/using-docker-hub-postgresql-images/)
-如果您想在Postgres中使用Docker托管的图片并应用于CI jobs或开发中，那么这是非常有用的建议。
+## [使用Docker Hub的Postgres镜像](https://www.2ndquadrant.com/en/blog/using-docker-hub-postgresql-images/)
+如果您想在Postgres中使用Docker托管的镜像并应用于CI jobs或开发中，那么这是非常有用的建议。
 
 `CRAIG RINGER`
 
