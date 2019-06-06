@@ -61,9 +61,9 @@ title: PostgreSQL 每周新闻 2019-6-5
 `SQITCH`
 
 # ![_config.yml]({{ site.baseurl }}/images/Tips-icon.png)   本周提示
-由GitPrime提供支持
+由GitPrime提供支持 ![img](https://res.cloudinary.com/cpress/image/upload/v1554813939/kwagarrsergds4sxgjr9.png)
 
-在psql中搜索旧查询
+### 在psql中搜索旧查询
 
 Postgres的官方（并且一直很受欢迎）的psql终端客户端有很多有趣的功能，到现在我才意识到这都是因为它使用了[Readline库](https://en.wikipedia.org/wiki/GNU_Readline)（通常，基于UNIX的实用程序, shell等也使用Readline库）。
 
@@ -73,12 +73,9 @@ Readline为提高psql的可用性带来了许多有用的文本编辑功能，�
 
 假设你有这样的会话：
 
-```
-INSERT INTO people (name, age) VALUES ('Jim', 74);
-SELECT * FROM people WHERE age > 18;
-SELECT * FROM people ORDER BY name ASC LIMIT 1;
-
-```
+`INSERT INTO people (name, age) VALUES ('Jim', 74);`
+`SELECT * FROM people WHERE age > 18;`
+`SELECT * FROM people ORDER BY name ASC LIMIT 1;`
 
 如果现在按Ctrl + R并输入SEL，你将看到之前的查询再次出现，因为它已准备好自动完成。如果你继续输入，可以进一步调整搜索范围或按Ctrl + C以跳出搜索功能。
 
