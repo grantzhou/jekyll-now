@@ -69,14 +69,20 @@ BRIN（块范围索引）索引是一种加速表顺序扫描的强大方法，�
 
 `DAVID ROHER`
 
-🗓  即将举办的Postgres活动  
+```markdown
+🗓  **即将举办的Postgres活动**  
+
 - [PostgreSQL Ibiza(六月19-21日, 伊维萨)](https://www.pgibz.io/index.html) —— 这个在西班牙著名的度假岛上举行的会议将会带来“海滩上的Postgres”，同时仍然在一个漂亮整洁的场地上进行会谈和培训。  
 - [Postgres Vision 2019(6月24日,波士顿)](https://postgresvision.com/) —— Web发明者Tim Berners-Lee爵士将发表主题演讲。
 - [PostgresLondon 2019 (7月2-3日，伦敦)](https://postgreslondon.org/)
 - [PostgresConf Beijing 2019(7月3-6日，中国北京)](https://postgresconf.org/conferences/Beijing)
 - [2019年奥地利PGDay (September 6 in Wiener Neustadt, Austria)](https://pgday.at/en/)
 
-🔬 psql命令周期表 （Again!）
+```
+
+
+
+🔬 **psql命令周期表 （Again!）**
 上周，我们包含了PSQL命令表（由Cybertec的Marcelo Diaz提供），但未能链接到更高分辨率版本以供您自己打印或安全保存！
 
 感谢所有通过电子邮件指出这个问题的人。现在已经解决了这个问题，所以这里是图表，它现在链接到一个更高分辨率的副本在[这里](http://no.gd/cheatsheet.png)：—）
