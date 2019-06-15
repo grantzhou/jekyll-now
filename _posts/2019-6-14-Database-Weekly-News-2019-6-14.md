@@ -13,7 +13,7 @@ title: 数据库每周新闻 2019-6-14
 
 `SCALEGRID`
 
-## [将R和Python在数据科学的较量](https://github.com/matloff/R-vs.-Python-for-Data-Science)
+## [R和Python在数据科学的较量](https://github.com/matloff/R-vs.-Python-for-Data-Science)
 在数据科学工作中使用python的方法越来越流行，但是r也许更适合这个任务。哪个更好？一个学习R的教授在这里做了一些比较。
 
 `NORM MATLOFF`
