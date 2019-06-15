@@ -6,7 +6,7 @@ title: 数据库每周新闻 2019-6-14
 ## 数据库每周新闻 #258 - 2019年6月14日
 ![config.yml]({{ site.baseurl }}/images/DBWeekly.png)
 备注：[英文原文地址](https://dbweekly.com/issues/258)
-![img]https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/ftryu0c63eifvjsgdhd4.jpg)
+![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/ftryu0c63eifvjsgdhd4.jpg)
 
 ## [一份2019年的开源数据库报告：MySQL还在领先吗？](https://scalegrid.io/blog/2019-open-source-database-report-top-databases-public-cloud-vs-on-premise-polyglot-persistence/)
 根据最近的调查，scalegrid介绍了开源数据库的使用情况（其中mysql、postgresql和mongodb是不出所料的领先者）。
