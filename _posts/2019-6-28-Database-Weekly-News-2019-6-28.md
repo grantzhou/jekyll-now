@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 数据库每周新闻 2019-6-29
+title: 数据库每周新闻 2019-6-28
 ---
 
-## 数据库每周新闻 #260 - 2019年6月29日
+## 数据库每周新闻 #260 - 2019年6月28日
 ![config.yml]({{ site.baseurl }}/images/DBWeekly.png)
 备注：[英文原文地址](https://dbweekly.com/issues/260)
 ![img](<https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/oznmvemhqzly31jmrymk.jpg>)
