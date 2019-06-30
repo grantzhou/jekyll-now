@@ -105,7 +105,7 @@ Kaggle是一种面向数据科学家的社交网络/共享平台，谷歌在2017
 
 
 
-[怎样设置数据库清理策略]( https://blog.overops.com/spring-cleaning-at-overops-how-and-why-we-changed-our-db-cleaning-strategy/)--我们的数据库经过长时间的运行，数据库的磁盘空间开始耗尽，下面僵尸解决这个问题的方法。
+[怎样设置数据库清理策略]( https://blog.overops.com/spring-cleaning-at-overops-how-and-why-we-changed-our-db-cleaning-strategy/)--我们的数据库经过长时间的运行，数据库的磁盘空间开始耗尽，下面是解决这个问题的方法。
 
 `AVIV DANZIGER`
 
