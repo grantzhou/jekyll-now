@@ -1,11 +1,11 @@
-```
+---
 layout: post
 title: PostgreSQL 每周新闻 2019-7-3
-```
+---
 
 ### PostgreSQL每周新闻#312 - 2019年7月3日
 
-
+![_config.yml]({{ site.baseurl }}/images/PostgresWeekly.png)
 
 备注：[英文原文地址](https://postgresweekly.com/issues/312)
 
