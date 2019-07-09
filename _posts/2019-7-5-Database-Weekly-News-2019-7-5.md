@@ -1,8 +1,11 @@
+---
 layout: post
 
 title: 数据库每周新闻 2019-7-5
+---
 
-# 数据库每周新闻#261 - 2019年7月5日
+
+### 数据库每周新闻#261 - 2019年7月5日
 
 ![config.yml]({{ site.baseurl }}/images/DBWeekly.png)
 
