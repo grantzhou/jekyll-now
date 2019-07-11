@@ -13,13 +13,13 @@ title: PostgreSQL 每周新闻 2019-7-10
 
 ## [Amazon Aurora PostgrsSQL Serverless 现已推出](https://aws.amazon.com/cn/blogs/aws/amazon-aurora-postgresql-serverless-now-generally-available/)
 
-这里有相当多的信息需要处理! [Amazon Aurora](https://aws.amazon.com/cn/rds/aurora/)是一个适应于性能的基于AWS的数据库，它提供MySQL和Postgres兼容性，并按小时收费。然而，serverless版本将自动衡量，让您只需“按需付费”(在一定程度上)。MySQL已经支持这种方法[一年了](https://aws.amazon.com/cn/blogs/aws/aurora-serverless-ga/)，现在轮到Postgres用户来尝试这种方法。
+[Amazon Aurora](https://aws.amazon.com/cn/rds/aurora/)是一个适应于性能的基于AWS的数据库，它提供MySQL和Postgres兼容性，并按小时收费。然而，serverless版本将自动衡量，让您只需“按需付费”(在一定程度上)。MySQL已经支持这种方法[一年了](https://aws.amazon.com/cn/blogs/aws/aurora-serverless-ga/)，现在轮到Postgres用户来尝试这种方法。
 
 `AMAZON WEB SERVICES`
 
 ## [在Postgres 12中生成列](https://www.2ndquadrant.com/en/blog/generated-columns-in-postgresql-12/)
 
-“数据仓库社区会很高兴知道，PostgreSQL现在有了一个可以基于其他列中的数据生成新的列的功能。“ 它是这样工作的。
+“数据仓库社区会很高兴知道，PostgreSQL现在有了一个可以基于其他列中的数据生成新的列的功能。“ 这里说明他是怎样工作的。
 
 `KIRK ROYBAL`
 
@@ -61,7 +61,7 @@ CSV是一种方便而通用的（多少有点怪怪的）数据交换格式，Po
 
 ## [（几乎）自动生成主键](https://fluca1978.github.io/2019/07/09/GeneratePrimaryKeys.html)
 
-也许我过着受保护的生活，但我想不出一个我想做这件事的理由。但很高兴知道我能(!)
+我想不出一个我想做这件事的理由。但是我还是很乐意知道我能够做到它(!)
 
 `LUCA FERRARI`
 
