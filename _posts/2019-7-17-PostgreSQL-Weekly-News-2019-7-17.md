@@ -1,7 +1,7 @@
-```
+---
 layout: post
 title: PostgreSQL 每周新闻 2019-7-17
-```
+---
 
 ### PostgreSQL每周新闻#314 - 2019年7月17日
 
