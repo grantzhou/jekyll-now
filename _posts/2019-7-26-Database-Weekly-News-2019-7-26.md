@@ -44,13 +44,13 @@ Adam Jacob说:“StrongDM消除了终端用户访问他们需要的系统时发�
 
 ### 总结：
 
-​	PostgreSQL[获得](https://www.2ndquadrant.com/en/blog/postgresql-award/)了O'Reilly开源终身成就奖。
+- PostgreSQL[获得](https://www.2ndquadrant.com/en/blog/postgresql-award/)了O'Reilly开源终身成就奖。
 
-​	最新的[SQL Server 2019技术预览版](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/sql-server-2019-community-technology-preview-3-2-is-now-available/)即将推出。它包括“大数据集群”，这是在SQL Server中进行大数据分析的新功能。
+- 最新的[SQL Server 2019技术预览版](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/sql-server-2019-community-technology-preview-3-2-is-now-available/)即将推出。它包括“大数据集群”，这是在SQL Server中进行大数据分析的新功能。
 
-​	[Azure数据共享](https://www.datanami.com/2019/07/19/azure-data-share-seeks-to-streamline-big-data-sharing/)是一项新的服务，它使从Azure Blob存储区或Azure Data Lake存储区向第三方组织共享数据变得更容易。
+- [Azure数据共享](https://www.datanami.com/2019/07/19/azure-data-share-seeks-to-streamline-big-data-sharing/)是一项新的服务，它使从Azure Blob存储区或Azure Data Lake存储区向第三方组织共享数据变得更容易。
 
-​	
+
 
 ### 💻招聘
 
