@@ -22,7 +22,7 @@ Permutive为发布者提供了一个数据和分析平台，BigQuery和HyperlogL
 
 `PAULIUS IMBRASAS`
 
-## [电子书](https://pganalyze.com/ebooks/optimizing-postgres-query-performance?utm_source=PostgresWeeklyPrimary)：优化数据库性能的最佳实践
+## [电子书：优化数据库性能的最佳实践](https://pganalyze.com/ebooks/optimizing-postgres-query-performance?utm_source=PostgresWeeklyPrimary)
 
 学习我们如何为Postgres优化性能,如何500倍的降低磁盘IO。
 
