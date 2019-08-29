@@ -23,7 +23,7 @@ title: PostgreSQL 每周新闻 2019-8-28
 
 `HANS-JÜRGEN SCHÖNIG`
 
-## [电子书:Postgres日志中管理数据库的的重要信息](https://pganalyze.com/ebooks/monitoring-postgres-logs?utm_source=PostgresWeeklyPrimary))
+## [电子书:Postgres日志中管理数据库的的重要信息](https://pganalyze.com/ebooks/monitoring-postgres-logs?utm_source=PostgresWeeklyPrimary)
 
 在这本pganalyze电子书中，我们将查看前6个Postgres日志事件，以监控查询性能并防止停机。
 
