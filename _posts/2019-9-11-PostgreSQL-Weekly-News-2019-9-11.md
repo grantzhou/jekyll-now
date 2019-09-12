@@ -7,22 +7,22 @@ title: PostgreSQL 每周新闻 2019-9-11
 备注：[英文原文地址](https://postgresweekly.com/issues/322)
 ![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/v1568155380/jqkp0qfoibvzfmh6l31h.png)
 ## [postgres升级方法初探](https://postgresweekly.com/link/69678/web)
-Postgres12就在附近，因此有必要重新了解一下升级Postgres安装所涉及的内容。kaarel研究了三种不同方法的利弊。
+Postgres12就在眼前了，因此有必要重新了解一下升级Postgres安装所涉及的内容。kaarel研究了三种不同方法的利弊。
 
 
 `Kaarel Moppel `
 ## [容器中postgres的高可用性选择探讨](https://postgresweekly.com/link/69679/web)
-运行postgres的集群容器需要一个控制器来监视和管理集群。为你的组织找到一个合适的。
+运行postgres的集群容器需要一个控制器来监视和管理集群。跟着我找寻适合你的方案。
 
 
 `EnterpriseDB `
 ## [管理Postgres用户和角色](https://postgresweekly.com/link/69680/web)
-这是几个月前的事了，但我们当时错过了。这真是一个遗憾，因为这是一个关于在postgres中与用户和角色合作的非常好的介绍。
+这是几个月前的文章了，但我们当时错过了。这真是一个遗憾，因为这是一个关于在postgres中与用户和角色合作的非常好的介绍。
 
 
 `Yaser Raja `
-## [postgres 12的真空度改进](https://postgresweekly.com/link/69681/web)
-postgres用户有时会抱怨真空维护任务。好吧，Postgres12让这些东西不那么痛苦，而且更容易经常使用。
+## [postgres 12的Vacuum改进](https://postgresweekly.com/link/69681/web)
+postgres用户有时会抱怨Vacuum维护任务。好吧，Postgres12让这些东西不那么痛苦，而且更容易经常使用。
 
 
 `Shaun Thomas `
@@ -32,7 +32,7 @@ postgres用户有时会抱怨真空维护任务。好吧，Postgres12让这些�
 
 `Dimitri Fontaine `
 ## [从postgres数据库中获取更多信息](https://postgresweekly.com/link/69686/web)
-pganalyze总结了他们在如何提高postgres数据库3倍性能方面的经验。很多有用的最佳实践。
+pganalyze总结了他们在如何提高postgres数据库3倍性能方面的经验。很多有用的最佳实践都在这里。
 
 
 `pganalyze `
@@ -74,7 +74,7 @@ INSERT INTO people (name, age, interests)
 ```
 
 
-使用row_to_json的最基本方法是使用row row构造函数，如下所示：
+使用row_to_json的最基本方法是使用行构造函数ROW，如下所示：
 
 
 ```
@@ -87,7 +87,7 @@ row_to_json
 ```
 
 
-我们可以看到表中不同类型的数据（字符串、整数、数组）反映在输出中，但列名却没有！幸运的是，有一种更好的方法可以通过使用子查询来解决这个问题：
+我们可以看到表中不同类型的数据（字符串、整数、数组）对应输出到结果中，但列名却没有！幸运的是，有一种更好的方法可以通过使用子查询来解决这个问题：
 
 
 ```
