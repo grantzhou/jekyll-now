@@ -60,6 +60,7 @@ netlify是一个非常新兴的现代网站托管平台，它推出了faunadb插
 
 ## [在非postgresql数据库中使用distinct on](https://dbweekly.com/link/74352/web)
 distinct on是postgres的sql方言中的一个整洁特性，用于选择明显匹配各种条件的第一行。（我们甚至在我们的Postgres时事通讯的第321期中对此进行了报道）。
+
 `Lukas Eder`
 
 
@@ -67,6 +68,7 @@ distinct on是postgres的sql方言中的一个整洁特性，用于选择明显�
 
 ## [电子书：优化Postgres查询性能的最佳实践](https://dbweekly.com/link/74354/web)
 了解如何得到一个3倍的性能改善，在这个自由的PGAnalyze电子书从磁盘加载500倍的Postgres数据库。
+
 `pganalyze sponsor`
 
 
@@ -74,6 +76,7 @@ distinct on是postgres的sql方言中的一个整洁特性，用于选择明显�
 
 ## [使用mysql作为bigquery与cube.js的缓存层](https://dbweekly.com/link/74355/web)
 一个有趣的想法是，使用bigquery作为一个缓慢的“单一真相来源”，而使用mysql作为一个“缓存层”，用于cube.js仪表板中某些查询的次秒级响应。
+
 `Artyom Keydunov`
 
 
@@ -81,6 +84,7 @@ distinct on是postgres的sql方言中的一个整洁特性，用于选择明显�
 
 ## [什么是sql“关系”？](https://dbweekly.com/link/74356/web)
 对“关系”概念的简短而甜蜜的介绍。这不仅仅是您熟悉的持久表，而是“事实上，任何sql查询都定义了一个新的关系。”dmitri本周还发布了一些相关文章，重新介绍了连接和聚合。
+
 `Dimitri Fontaine`
 
 
@@ -88,6 +92,7 @@ distinct on是postgres的sql方言中的一个整洁特性，用于选择明显�
 
 ## [在azure sql数据库中热修补sql服务器引擎](https://dbweekly.com/link/74358/web)
 一个强技术性，但很有趣的例子，解释azure团队如何管理实时热修补程序，运行azure sql数据库使用的sql server引擎版本，以便在不影响客户的情况下保持最新。体验这个奇怪的方法，但是你不能依赖于它。
+
 `Hans Olav Norheim (Microsoft)`
 
 
@@ -95,6 +100,7 @@ distinct on是postgres的sql方言中的一个整洁特性，用于选择明显�
 
 ## [waltz：分布式预写日志](https://dbweekly.com/link/74359/web)
 最初被设计为wepay系统的交易分类账，但现在被广泛应用于需要可序列化一致性的分布式系统的更广泛的用例。
+
 `wepay`
 
 
@@ -102,6 +108,7 @@ distinct on是postgres的sql方言中的一个整洁特性，用于选择明显�
 
 ## [nanosql 2：客户机、服务器和移动设备的通用“数据库层”](https://dbweekly.com/link/74360/web)
 基本上是对任何希望在应用程序中使用数据库的javascript开发人员的抽象。它可以在幕后使用许多实际的数据库，包括localstorage、indexeddb、rocksdb、redis、dynamodb、scylladb和sqlite。它自称是“Lego™ for databases”。
+
 `Scott Lott`
 
 
@@ -109,6 +116,7 @@ distinct on是postgres的sql方言中的一个整洁特性，用于选择明显�
 
 ## [poli：为sql爱好者构建的一个易于使用的sql报告应用程序](https://dbweekly.com/link/74361/web)
 基于Java的，可以连接到通过JDBC支持的任何数据库。
+
 `Zhonglu`
 
 
