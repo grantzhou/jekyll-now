@@ -3,7 +3,7 @@ layout: post
 title: 数据库每周新闻 2019-9-13
 ---
 ### 数据库每周新闻#271 - 2019年9月13日
-![_config.yml]({{ site.baseurl }}/images/PostgresWeekly.png)
+![_config.yml]({{ site.baseurl }}/images/DBWeekly.png)
 备注：[英文原文地址](https://dbweekly.com/issues/271)
 
 

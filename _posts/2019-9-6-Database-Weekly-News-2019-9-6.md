@@ -3,7 +3,7 @@ layout: post
 title: 数据库每周新闻 2019-9-6
 ---
 ### 数据库每周新闻#270 - 2019年9月6日
-![_config.yml]({{ site.baseurl }}/images/PostgresWeekly.png)
+![_config.yml]({{ site.baseurl }}/images/DBWeekly.png)
 备注：[英文原文地址](https://dbweekly.com/issues/270)
 ![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/bgkvgy6izno15kaxuxyl.jpg)
 
