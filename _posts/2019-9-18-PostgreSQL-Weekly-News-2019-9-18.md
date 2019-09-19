@@ -117,4 +117,4 @@ TABLE x;
 - [PostgresConf South Africa 2019](https://postgresweekly.com/link/77110/web)（10月8日至9日，约翰内斯堡）-这是数据库管理和使用postgres的开发人员相互了解的机会。
 - [PostgreSQL Conference Europe 2019](https://postgresweekly.com/link/77111/web)（10月15日至18日，意大利米兰）
 - [pgDay Santiago](https://postgresweekly.com/link/77112/web)（10月29日，智利圣地亚哥）
-- [PG Down Under 2019](https://postgresweekly.com/link/77113/web)（11月15日，澳大利亚悉尼）-本年度澳大利亚邮政会议的第二次出游。CFP现在打开了。
+- [PG Down Under 2019](https://postgresweekly.com/link/77113/web)（11月15日，澳大利亚悉尼）-澳大利亚Postgres会议。
