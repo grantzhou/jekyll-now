@@ -22,7 +22,7 @@ yugabyte db是一个受google Spanner启发的云本地分布式sql数据库，�
 
 `Kannan Muthukkaruppan `
 ## [postgres 12中的一些特殊情况性能增强](https://postgresweekly.com/link/77463/web)
-PostgreSQL的每一个新版本都有一系列的性能增强，有些是通用的，有些是非常小的。以下是三个非常具体的利基改进。
+PostgreSQL的每一个新版本都有一系列的性能增强，有些是通用的，有些是非常小的。以下是三个非常具体的改进。
 
 
 `John Naylor `
@@ -31,7 +31,7 @@ PostgreSQL的每一个新版本都有一系列的性能增强，有些是通用�
 
 
 `Parikshit Savjani `
-## [使用行级安全性的一个实例](https://postgresweekly.com/link/77465/web)
+## [使用行安全的一个实例](https://postgresweekly.com/link/77465/web)
 向不同类型的用户授予不同权限以处理同一表的示例。
 
 
