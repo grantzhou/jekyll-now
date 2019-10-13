@@ -98,7 +98,7 @@ Ravendb首席执行官Oren Eini演示如何使用基于文档的模型将您的�
 
 
 
-## [Facebook的Scribe如何每小时传输数PB的日志](https://dbweekly.com/link/78475/web)
+## [Facebook的Scribe如何每小时传输PB级别的日志](https://dbweekly.com/link/78475/web)
 目前的版本还不是开源的，但scribe是facebook的分布式缓冲队列系统，它每小时移动facebook的“几个PB”的日志。
 
 `Facebook Engineering`
@@ -106,7 +106,7 @@ Ravendb首席执行官Oren Eini演示如何使用基于文档的模型将您的�
 
 
 
-## [SQL“谋杀之谜”](https://dbweekly.com/link/78476/web)
+## [SQL学习](https://dbweekly.com/link/78476/web)
 这是一个自学SQL概念和命令的课程，也是一个有趣的游戏，供有经验的SQL用户解决问题。
 
 `NUKnightLab`
