@@ -6,7 +6,7 @@ title: PostgreSQL 每周新闻 2019-10-16
 ![_config.yml]({{ site.baseurl }}/images/PostgresWeekly.png)
 备注：[英文原文地址](https://postgresweekly.com/issues/327)
 ![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/v1571171920/atzjvqowzsi1oceo6pxu.png)
-## [不确定排序](https://postgresweekly.com/link/78480/web)
+## [不定排序](https://postgresweekly.com/link/78480/web)
 postgres 12支持一个新的确定性属性，在创建排序规则时可以将其设置为false，这使得两个字节不同的字符串可以在既定的排序规则下呗判断为是相等的。这开创了许多与文本匹配的方法，而无需使用显式函数。
 
 
