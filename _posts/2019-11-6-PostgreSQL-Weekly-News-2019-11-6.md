@@ -63,13 +63,13 @@ pg_partition_manager是一个新的gem，用于在应用程序中添加和过期
 
 对列内容执行任意搜索的一种简单方法是在查询中使用LIKE子句例如，在一个blog posts表中，此查询可以找到标题包含字符串Java的所有posts：
 
-```
-SELECT * FROM posts WHERE title LIKE '%Java%';
+```sql
+SELECT * FROM posts WHERE title LIKE ''%Java%'';
 ```
 
 如果您想要创建更详细的查询：
 
-```
+```sql
 SELECT * FROM posts WHERE title LIKE '%Java%' OR title LIKE '%Perl%' OR title LIKE '%Python%';
 ```
 
@@ -77,13 +77,13 @@ Postgres支持两个名为ANY的SQL操作符和所有可用于对一组值执行
 
 ANY和ALL更常用于子查询，但我们可以将多个相似的匹配模式放入一个数组中，然后将其提供给任意或所有相似的子查询：
 
-```
+```sql
 SELECT * FROM posts WHERE title LIKE ANY(ARRAY['%Java%', '%Perl%', '%Python%']);
 ```
 
 如果您愿意，还可以使用一种较短的样式编写数组文本：
 
-```
+```sql
 SELECT * FROM posts WHERE title LIKE ANY('{%Java%,%Perl%,%Python%}');
 ```
 
