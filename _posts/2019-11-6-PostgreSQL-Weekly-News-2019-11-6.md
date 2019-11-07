@@ -61,7 +61,7 @@ pg_partition_manager是一个新的gem，用于在应用程序中添加和过期
 
 # 💡本周提示
 
-对列内容执行任意搜索的一种简单方法是在查询中使用LIKE子句例如，在一个blog posts表中，此查询可以找到标题包含字符串“Java”的所有posts：
+对列内容执行任意搜索的一种简单方法是在查询中使用LIKE子句例如，在一个blog posts表中，此查询可以找到标题包含字符串Java的所有posts：
 
 ```
 SELECT * FROM posts WHERE title LIKE '%Java%';
