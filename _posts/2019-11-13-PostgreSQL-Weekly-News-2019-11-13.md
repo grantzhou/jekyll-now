@@ -32,7 +32,7 @@ title: PostgreSQL 每周新闻 2019-11-13
 
 `Paul Ramsey `
 
-## [混沌顺序：随机查询以揭示顺序相关性](https://postgresweekly.com/link/79797/web)
+## [随机查询以揭示顺序相关性](https://postgresweekly.com/link/79797/web)
 Conor Cunningham将不带order BY子句的查询顺序等同于驾驶没有安全带的汽车…
 
 `Alex Baldwin `
