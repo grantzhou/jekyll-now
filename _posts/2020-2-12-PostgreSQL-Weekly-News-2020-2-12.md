@@ -76,7 +76,7 @@ Postgres快捷键
 
 
 **🗓即将举办的Postgres活动**
-- [PgConf India](https://postgresweekly.com/link/83753/web)（2月26日至28日，印度班加罗鲁）。
+- [PgConf India](https://postgresweekly.com/link/83753/web)（2月26日至28日，印度班加罗鲁）
 - [Postgres Conference 2020](https://postgresweekly.com/link/83754/web)（3月23日至27日，美国纽约）
 - [Nordic PgDay 2020](https://postgresweekly.com/link/83755/web)（3月24日芬兰赫尔辛基）
 - [pgDay Paris 2020](https://postgresweekly.com/link/83756/web)（3月26日，法国巴黎）
