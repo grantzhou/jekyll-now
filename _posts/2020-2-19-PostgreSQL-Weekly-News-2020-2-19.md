@@ -42,7 +42,7 @@ autovacuum乎运行良好，但当autovacuum遇到问题时时，你y应该怎�
 
 
 `Jobin Augustine `
-## [Postgres Vision 2020-提前购买鸟票](https://postgresweekly.com/link/84093/web)
+## [Postgres Vision 2020-购买早鸟票](https://postgresweekly.com/link/84093/web)
 Postgres大会将于今年6月22日至24日在波士顿举行。
 
 
