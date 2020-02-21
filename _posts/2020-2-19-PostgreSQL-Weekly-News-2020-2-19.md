@@ -32,7 +32,7 @@ autovacuum乎运行良好，但当autovacuum遇到问题时时，你y应该怎�
 
 `Robert Haas `
 
-## [利用pg_setting配置你的Postgres数据库](https://postgresweekly.com/link/84091/web)
+## [利用pg_settings配置你的Postgres数据库](https://postgresweekly.com/link/84091/web)
 如果你想知道Postgres的默认配置有什么问题。pg_settings视图为您提供了一个有关当前情况的权威视图。
 
 
