@@ -25,12 +25,12 @@ title: PostgreSQL 每周新闻 2020-3-4
 
 
 `Hans-Jürgen Schönig `
-## [PGTune：创建Postgres配置设置的Web工具](https://postgresweekly.com/link/84771/web)
+## [PGTune：创建Postgres配置的Web工具](https://postgresweekly.com/link/84771/web)
 选择Postgres版本（现在也支持v12），说明你的数据库的用途，总内存等，它会产生一套优于默认值的配置文件。
 
 
 `Alexey Vasiliev `
-## [Postgres13中的平行vacuum](https://postgresweekly.com/link/84772/web)
+## [Postgres13中的并行vacuum](https://postgresweekly.com/link/84772/web)
 虽然花了很多年才取得成果，但支持并行vacuum的主要工作还是致力于Postgres内核。
 
 `Hamid Akhtar `
