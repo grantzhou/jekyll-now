@@ -8,7 +8,7 @@ title: 数据库每周新闻 2020-4-3
 ![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/rsiws90etsyjbzlxirzm.jpg)
 
 
-## [黑客们已经抹去了超过15000个Elasticsearch服务器](https://dbweekly.com/link/86360/web)
+## [黑客们已经攻击了超过15000个Elasticsearch服务器](https://dbweekly.com/link/86360/web)
 多年来，我们看到许多关于远程访问数据库被黑客集体攻击的报道，现在轮到Elasticsearch了。一个提醒，如果你需要的话，审计你的数据库和整体安全状况。
 
 `Catalin Cimpanu (ZDNet)`
