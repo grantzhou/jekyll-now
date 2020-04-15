@@ -64,10 +64,12 @@ Joe，又名begriffs，谈论他为什么做文档，谈论为什么多租户和
 # 💡本周提示
 
 **🗓即将举办的Postgres活动**
-由于新冠肺炎爆发，我们列出的所有面对面活动现已被取消或推迟。 一些事件正在寻找在线运行的方式，因此我们将在本节中专门讨论在线事件，直播等。。
+由于新冠肺炎爆发，我们列出的所有面对面活动现已被取消或推迟。 一些事件正在寻找在线运行的方式，因此我们将在本节中专门讨论在线事件，直播等。
 
 如果有这样的活动的话，请点击回复，如果它与Postgres有关（免费或不太昂贵），我们将在以后的版本中发布。
 这周只有一个：
-- [PostgreSQL中的Date/Timestamp数据类型](https://postgresweekly.com/link/86728/web)🔐Andrew Dunstan and 2ndQuardrant on April 22 at 4pm UTC.。
+- [PostgreSQL中的Date/Timestamp数据类型](https://postgresweekly.com/link/86728/web)🔐Andrew Dunstan and 2ndQuardrant on April 22 at 4pm UTC。
+
 🔐 - 需要电子邮件地址或registration
+
 💵 - 费钱参加
