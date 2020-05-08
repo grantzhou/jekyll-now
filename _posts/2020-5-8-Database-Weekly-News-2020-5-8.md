@@ -26,8 +26,7 @@ Scylla（与Cassandra兼容的NoSQL数据存储，旨在成为“世界上最快
 `Timescale sponsor`
 
 
-## [
-TileDB 2.0与数据科学的未来](https://dbweekly.com/link/88070/web)
+## [TileDB 2.0与数据科学的未来](https://dbweekly.com/link/88070/web)
 TileDB是一个可嵌入的存储引擎，致力于处理密集和稀疏的多维数组。这是一个具有官方Python，R，Java和Go集成的C++库，但它也可以与其他数据库系统集成。2.0引入了数据框架支持，R的新API以及对Google Cloud Storage和Azure Blob Storage的支持。
 
 `Stavros Papadopoulos`
