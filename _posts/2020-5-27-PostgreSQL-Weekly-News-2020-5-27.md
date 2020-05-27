@@ -6,8 +6,7 @@ title: PostgreSQL 每周新闻 2020-5-27
 ![_config.yml]({{ site.baseurl }}/images/PostgresWeekly.png)
 备注：[英文原文地址](https://postgresweekly.com/issues/357)
 ![img](https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60/v1590578119/r9cos6ub8ngudxno6wuy.jpg)
-## 
-顺便说一句，如果您想关注一些Postgres现场对话，请务必检查PGCon，因为在我们发行这一版时，它正在进行中。
+# 💡顺便说一句，如果您想关注一些Postgres现场对话，请务必检查PGCon，因为在我们发行这一版时，它正在进行中。
 
 
 ## [EXPLAIN ANALYZE可能是在骗你](https://postgresweekly.com/link/88968/web)
@@ -46,7 +45,6 @@ Postgres上的文章通常不是一开始就依赖海森堡的不确定性原理
 
 `Louise Grandjonc `
 ## [Postgres的13再添FETCH先用TIES](https://postgresweekly.com/link/88978/web)
-l,null,"en
 
 
 `Denis Gobo `
