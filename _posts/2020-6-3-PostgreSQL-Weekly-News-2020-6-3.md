@@ -80,4 +80,4 @@ Timescale在PostgreSQL上免费提供其多节点时间序列数据库（“有�
 
 **🗓即将举办的Postgres活动**
 - [Postgres Pulse](https://postgresweekly.com/link/89441/web) - 每周星期一美东时间上午11点。 每周进行一次基于Zoom的会议，与Bruce Momjian，Vibhor Kumar和EnterpriseDB的其他人进行会议。
-- [Postgres Vision 2020](https://postgresweekly.com/link/89442/web) - 6月23日至24日的Postgres Vision 2020。 多天多次的进行在线Postgres会议。
+- [Postgres Vision 2020](https://postgresweekly.com/link/89442/web) - 将在6月23日至24日进行多天多次的在线Postgres会议。
