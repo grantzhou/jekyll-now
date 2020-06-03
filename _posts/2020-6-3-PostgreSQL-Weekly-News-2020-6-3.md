@@ -12,7 +12,7 @@ title: PostgreSQL 每周新闻 2020-6-3
 
 `Noah Doersing `
 ## [死锁，页面锁，咨询锁和谓词锁](https://postgresweekly.com/link/89427/web)
-欢迎使用Egor Rogov的一个惊人的Postgres深入探究。 来这里有很多东西要学习
+欢迎来到Egor Rogov的一篇关于的Postgres深入探究。 来这里有很多东西要学习
 
 
 `Егор Рогов `
