@@ -69,8 +69,8 @@ PDF:Kubernetes中运行Postgres的主要选项以及每个选项中包含的一�
 ## [为JSONB列编制索引的故事](https://postgresweekly.com/link/91035/web)
 当涉及到大规模使用JSONB时，故事和技巧的完美结合。
 
-`Vsevolod Solovyov `
 
+`Vsevolod Solovyov `
 # 💡本周提示
 
 
@@ -135,6 +135,3 @@ name     | model
 -------------------
 YugabyteDB | rdbms
 ```
-
-
-**🗓即将举办的Postgres活动**
