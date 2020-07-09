@@ -51,8 +51,7 @@ Postgres 12引入了生成列的概念，即从其他列的值生成的列。这
 
 
 `EDB `
-## [
-Storj如何从Postgres迁移到CockroachDB：批量加载性能](https://postgresweekly.com/link/91435/web)
+## [Storj如何从Postgres迁移到CockroachDB：批量加载性能](https://postgresweekly.com/link/91435/web)
 l,null,"en
 
 
