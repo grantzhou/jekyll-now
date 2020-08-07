@@ -68,7 +68,7 @@ WAL-G使您可以管理Postgres数据和备份的归档，还可以使您在特�
 `Marco Slot and Claire Giordano `
 # 💡本周提示
 
-###FROMAT功能
+### FROMAT功能
 当没有立即想到新的Postgres技巧时，我最喜欢的技术之一就是浏览（写的超级好的）Postgres文档，直到我发现以前不知道的东西，但我认为可能对未来有些帮助。 而今天我找到了FORMAT函数！
 
 如果您熟悉各种语言（例如Python，C或Ruby）的format，printf或sprintf，您将知道格式字符串是什么-使用由特殊分隔符组成的简单模板语言的字符串，可以用分隔符替换value。 Postgres在FORMAT函数中提供了相同的想法：
