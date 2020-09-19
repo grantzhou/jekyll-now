@@ -90,7 +90,7 @@ Apache Foundation孵化了很多出色的软件，实际上很多东西可以在
 
 `Apache Foundation`
 
-##💻招聘
+### 招聘
 
 ## [Devops工程师（全职/完全远程）](https://dbweekly.com/link/95417/web)
 我们正在寻找一名devops加入我们快速发展且资金雄厚的公司，该公司会让成千上万的非洲时装设计师感到高兴。
