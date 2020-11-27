@@ -74,7 +74,7 @@ Django的共同创建者之一西蒙（Simon）以他在基于SQLite的数据管
 `Hassen Chaieb`
 
 
-#🔨 代码和工具
+# 🔨 代码和工具
 
 ## [libmdbx：超快速，嵌入式的键值数据库](https://dbweekly.com/link/99409/web)
 不带WAL的可嵌入键值ACID数据库，在可靠性，功能和性能方面声称甚至超过LMDB。
@@ -94,11 +94,11 @@ MonetDB是一个开放源代码，高性能的面向列的数据存储，它以S
 `MonetDB Solutions`
 
 
-## 在Python中为SQL数据库设置GraphQL](https://www.ivaylopavlov.com/setting-up-graphql-for-an-sql-database-in-python/#.X8FEbmhKikw)
+## [在Python中为SQL数据库设置GraphQL](https://www.ivaylopavlov.com/setting-up-graphql-for-an-sql-database-in-python/#.X8FEbmhKikw)
 
 `IVAYLO PAVLOV`
 
-#💻 招聘
+# 💻 招聘
 
 ## [X-Team（远程）的DevOps工程师](https://dbweekly.com/link/99415/web)
 加入最有活力的开发人员社区，并参与Riot Games，FOX，Sony，Coinbase等项目。
