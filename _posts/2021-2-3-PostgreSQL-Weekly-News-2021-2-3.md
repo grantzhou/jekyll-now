@@ -52,7 +52,7 @@ Fauna将Postgres的安全性与架构灵活性，现代功能和无限规模结�
 
 `Tom Kincaid (EDB) `
 
-## [使用`psql`元命令快速记录您的Postgres数据库]https://postgresweekly.com/link/102318/web)
+## [使用`psql`元命令快速记录您的Postgres数据库](https://postgresweekly.com/link/102318/web)
 
 `MARK LANE`
 ## [使用适用于PostgreSQL的Azure数据库构建应用的最佳实践](https://postgresweekly.com/link/102319/web)
