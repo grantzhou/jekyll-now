@@ -26,7 +26,7 @@ Fauna将Postgres的操作完整性和关系建模与界面和体系结构相结�
 `Fauna sponsor`
 
 
-## [欧洲专利局考虑对合格的SQL专利进行扩展](https://dbweekly.com/link/103478/web)
+## [欧洲专利局认为SQL扩展是有专利资格的](https://dbweekly.com/link/103478/web)
 这是一篇关于法律的文章，主要关于欧洲专利局如何将在单个语句中修改集合值列和标量值列这样的SQL扩展认为是“技术性”的。
 
 `Bastian Best`
