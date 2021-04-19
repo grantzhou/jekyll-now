@@ -5,8 +5,6 @@ title: 数据库每周新闻 2021-4-16
 ### 数据库每周新闻#350 - 2021年4月16日
 ![_config.yml]({{ site.baseurl }}/images/DBWeekly.png)
 备注：[英文原文地址](https://dbweekly.com/issues/350)
-
-
 ## [介绍OpenSearch:AWS的Elasticsearch和Kibana分支](https://dbweekly.com/link/106483/web)
 早在一月份，Elastic就宣布对其Elasticsearch和Kibana项目进行有争议的许可变更，亚马逊决定将其投入自己的“社区驱动”项目，现在称为OpenSearch。
 
